@@ -1,0 +1,118 @@
+<?php get_header(); ?>
+<body class="page">
+<?php get_header('gtm'); ?>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v12.0" nonce="z7rj4bbO"></script>
+<!-- ページヘッダ -->
+<header class="header pc">
+<?php get_header('nav'); ?>
+</header><!-- /ページヘッダ -->
+<!-- メインコンテンツ -->
+<main class="main wrapper">
+<div class="btm_nav sticky-wrapper" uk-sticky="bottom: true">
+<?php get_header('menu'); ?>
+</div>
+<!-- ページタイトル -->
+<!-- /ページタイトル -->
+	<section class="contact">
+		<div class="container_s">
+			<div class="hero page-title wrapper">
+	<div class="hero-body">
+		<div class="hero-tit">
+			<h3 class="uk-text-center">ご請求ありがとうございます！</h3>
+		</div>
+	</div>
+				<div class="btn-box uk-text-center">
+					<?php if (have_posts()): ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+    <?php endwhile; ?>
+<?php else: ?>
+<?php endif; ?>
+					
+				</div>
+</div>
+			<!--<div class="container_s">
+				<div class="uk-text-center mt-m">
+				<div class="fb-like" data-href="https://rooms.receptionist.jp/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+			<p class="uk-text-center mt-s">facebookページでは<strong>プロダクトの最新情報</strong>を発信しています。<br>
+ぜひ「いいね」をして情報を受け取ってください。</p>
+			</div>
+				</div> -->
+			
+		</div>
+	</section>
+	<!--<section class="info_consul">
+		<div class="container">
+			<h3 class="uk-text-center">オンライン相談会に参加しませんか？</h3>
+			<div class="uk-flex mt-l">
+			  <div class="img-box">
+				<div class="tit-box">
+				  <h4>ご予約カレンダー</h4>
+					<a href="" class="txt-link" target="_blank">別ウィンドウで開く<i class="fas fa-external-link-alt"></i></a>
+				  </div>
+				  <figure><img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/img_cal.png" alt=""/></figure>
+				</div>
+				<div class="txt-box">
+					<h4>私が担当します！</h4>
+					<div class="prof-box">
+						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/img_prof.png" alt=""/></div>
+						<dl><dt>白上</dt><dd>アカウントプランナーチームマネージャー</dd></dl>
+					</div>
+					<p class="b1 b2-sp">資料請求をいただいた方だけに、オンライン相談会をご案内しております。資料だけでは不明な点、管理画面の操作方法、導入事例や部署ごとの活用方法など、様々な疑問に30分程度でお答えします。
+ぜひ、カレンダーから空いている日時を選んでご予約くださいませ</p>
+				</div>
+			</div>
+		</div>
+	</section>-->
+	<section class="service-index-wrap">
+<?php get_footer('service'); ?>
+	</section>
+</main>
+<!-- /メインコンテンツ -->
+<footer class="footer">
+<?php get_footer(); ?>
+</footer>
+<script src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
+<script>
+$(function(){
+ $('.system01-slider').slick({
+   slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+	 dots:true,
+    responsive: [{
+      breakpoint: 1024,  //ブレイクポイントを指定
+      settings: {
+        slidesToShow: 2,
+      }
+    },{
+      breakpoint: 575,  //ブレイクポイントを指定
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+ });
+ $('.system02-slider').slick({
+   slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: false,
+	 dots:true,
+    responsive: [{
+      breakpoint: 1024,  //ブレイクポイントを指定
+      settings: {
+        slidesToShow: 2,
+      }
+    },{
+      breakpoint: 575,  //ブレイクポイントを指定
+      settings: {
+        slidesToShow: 1,
+      }
+    }]
+ });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*
+Theme Name: rooms2026
+Theme URL: https://rooms.receptionist.jp/
+Description: 予約ルームズのワードプレステーマ
+Author: 株式会社RECEPTIONIST
+Version: 1.0
+Tags: スペース予約管理システム
+License: 株式会社RECEPTIONIST
+License URI: https://receptionist.co.jp/
+*/
+.capabilities{
+        padding: 70px 0 100px;
+            width: 100%;
+    max-width: 1144px;
+    margin: 0 auto;
+    }   
+    .capabilities ul.capabilities_ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .capabilities ul.capabilities_ul li a{
+        display: block;
+    }
+    .capabilities ul.capabilities_ul li:nth-child(2){
+        margin: 0 20px;
+        
+    }
+    .capabilities ul.capabilities_ul li h4{
+        font-size: 29px;
+        line-height: 1.2em;
+        padding-left: 85px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+    .capabilities ul.capabilities_ul li:nth-child(1) h4::after{
+        content:"01.";
+        height: 50px;
+        width: 70px;
