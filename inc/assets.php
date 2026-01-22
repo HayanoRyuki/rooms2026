@@ -70,6 +70,21 @@ function theme_enqueue_scripts() {
 		null
 	);
 
+	// ヘッダー・フッター共通CSS
+	wp_enqueue_style(
+		'header',
+		$theme_uri . '/css/header.css',
+		array( 'theme-style' ),
+		null
+	);
+
+	wp_enqueue_style(
+		'footer',
+		$theme_uri . '/css/footer.css',
+		array( 'theme-style' ),
+		null
+	);
+
 	// セクション用CSS（トップページのみ）
 	if ( is_front_page() ) {
 		wp_enqueue_style(
@@ -112,7 +127,7 @@ function theme_enqueue_scripts() {
 	 * JS（vendor）
 	 * ========================= */
 
-	$vendor = $theme_uri . '/js/';
+	$vendor = $theme_uri . '/js/vendor/';
 
 	wp_enqueue_script(
 		'vendor-common',

@@ -417,7 +417,7 @@
 
     <footer class="footer"></footer>
 
-    <script src="/wp-content/themes/rooms.receptionist.jp/lp01/js/vendor/slick.min.js"></script>
+    <script src="/wp-content/themes/rooms.receptionist.jp/lp01/js/slick.min.js"></script>
     <script src="/wp-content/themes/rooms.receptionist.jp/lp01/js/vendor/common.js"></script>
 
     <script>

@@ -1,0 +1,257 @@
+/**
+ * フッター用CSS
+ */
+
+/* ======================
+   Footer Navigation
+   ====================== */
+.foot-nav-wrapper {
+  background: var(--light-gray-lightest);
+  padding: var(--spacing-l) 0;
+}
+
+.foot-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.f-logo {
+  margin-bottom: 20px;
+}
+
+.f-logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.pmark {
+  margin-top: 15px;
+}
+
+.pmark img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* ======================
+   Footer Nav Lists
+   ====================== */
+.tit-box {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.tit-box h6 {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: var(--light-black);
+  margin: 0;
+}
+
+.tit-box h6 small {
+  display: block;
+  font-size: 0.75em;
+  font-weight: normal;
+  color: var(--light-gray-dark);
+  margin-bottom: 5px;
+}
+
+.tit-box h6 a {
+  color: var(--light-black);
+  text-decoration: none;
+}
+
+.tit-box span {
+  display: none;
+}
+
+.f-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.f-nav-list li {
+  margin-bottom: 10px;
+}
+
+.f-nav-list li a {
+  font-size: 0.8em;
+  color: var(--light-gray-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.f-nav-list li a:hover {
+  color: var(--accent-default);
+}
+
+/* ======================
+   Footer Sub Navigation
+   ====================== */
+.f_s_nav {
+  margin-top: var(--spacing-m);
+  padding-top: var(--spacing-s);
+  border-top: 1px solid var(--light-divider);
+}
+
+.f_s_nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.f_s_nav ul li a {
+  font-size: 0.75em;
+  color: var(--light-gray-dark);
+  text-decoration: none;
+}
+
+.f_s_nav ul li a:hover {
+  color: var(--accent-default);
+}
+
+/* ======================
+   Copyright
+   ====================== */
+.f-copyright {
+  text-align: center;
+  margin-top: var(--spacing-s);
+  color: var(--light-gray-dark);
+}
+
+.f-copyright small {
+  font-size: 0.75em;
+}
+
+/* ======================
+   Service Index（フッター上部）
+   ====================== */
+.service-index-wrap {
+  background: var(--light-white);
+  padding: var(--spacing-l) 0;
+  border-top: 1px solid var(--light-divider);
+}
+
+.service-index {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-index-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--light-black);
+  text-align: center;
+  margin-bottom: var(--spacing-m);
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: var(--light-gray-lightest);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.service-card.current {
+  background: var(--accent-light);
+  border: 2px solid var(--accent-default);
+}
+
+.service-card-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.service-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service-card-label {
+  font-size: 0.7em;
+  color: var(--light-gray-dark);
+  margin-bottom: 3px;
+}
+
+.service-card-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--light-black);
+  margin: 0;
+}
+
+/* ======================
+   Responsive
+   ====================== */
+@media screen and (max-width: 767px) {
+  .foot-nav-wrapper {
+    padding: var(--spacing-m) 6%;
+  }
+
+  .tit-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-divider);
+  }
+
+  .tit-box span {
+    display: block;
+    color: var(--light-gray-dark);
+  }
+
+  .f-nav-list {
+    display: none;
+    padding: 10px 0;
+  }
+
+  .f-nav-list.open {
+    display: block;
+  }
+
+  .f_s_nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .f_s_nav ul li:nth-child(even) {
+    display: none;
+  }
+
+  .service-index-wrap {
+    padding: var(--spacing-m) 6%;
+  }
+
+  .service-cards > div {
+    margin-bottom: 15px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-card-icon {
+    width: 50px;
+    height: 50px;
+  }
+}

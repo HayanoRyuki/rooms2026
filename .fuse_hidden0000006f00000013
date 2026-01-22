@@ -1,10 +1,10 @@
 <?php
 /**
- * お役立ち資料 シングル
+ * 導入事例 シングル
  */
 get_header();
 ?>
-<body class="page resource-single-page">
+<body class="page case-single-page">
 <?php get_header('gtm'); ?>
 
 <main class="main wrapper">
@@ -15,7 +15,7 @@ get_header();
   <?php
   if (have_posts()) :
     while (have_posts()) : the_post();
-      get_template_part('template-parts/resource/single');
+      get_template_part('template-parts/case/single');
     endwhile;
   endif;
   ?>
@@ -33,6 +33,6 @@ get_header();
   <?php get_footer(); ?>
 </footer>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 </body>
 </html>

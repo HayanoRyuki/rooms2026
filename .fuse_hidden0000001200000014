@@ -1,10 +1,10 @@
 <?php
 /**
- * お役立ち資料 シングル
+ * イベント 詳細ページ
  */
 get_header();
 ?>
-<body class="page resource-single-page">
+<body class="page event-single-page">
 <?php get_header('gtm'); ?>
 
 <main class="main wrapper">
@@ -13,11 +13,9 @@ get_header();
   </div>
 
   <?php
-  if (have_posts()) :
-    while (have_posts()) : the_post();
-      get_template_part('template-parts/resource/single');
-    endwhile;
-  endif;
+  while (have_posts()) : the_post();
+    get_template_part('template-parts/event/single');
+  endwhile;
   ?>
 
   <section class="bnr_dl_cta bnr_page">
@@ -33,6 +31,6 @@ get_header();
   <?php get_footer(); ?>
 </footer>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/common.js"></script>
 </body>
 </html>

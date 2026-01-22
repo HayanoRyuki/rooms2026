@@ -19,18 +19,23 @@
 			<div class="hero page-title wrapper">
 	<div class="hero-body">
 		<div class="hero-tit">
-			<h3 class="uk-text-center">ご請求ありがとうございます！</h3>
+			<h3 class="uk-text-center">この度は弊社サービスにお問い合わせをいただき、誠にありがとうございます。</h3>
+				<p>2営業日（土日祝を除く）以内に担当者からご連絡いたします。</p>
+&nbsp;
+&nbsp;
+&nbsp;
+<br />
+<br />
+<br />
+<span style="font-size: 16px;">▼お急ぎの方は、こちらからオンライン相談をご予約ください▼</span>
+&nbsp;
+
+<a class="btn btn_sq" href="https://t.receptionist.jp/rooms_500">従業員数500名以下の企業様：　予約ルームズのオンライン相談を予約する！</a>
+<br />
+<a class="btn btn_sq" href="https://t.receptionist.jp/rooms_501">従業員数501名以上の企業様：　予約ルームズのオンライン相談を予約する！</a>
+
 		</div>
 	</div>
-				<div class="btn-box uk-text-center">
-					<?php if (have_posts()): ?>
-    <?php while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-    <?php endwhile; ?>
-<?php else: ?>
-<?php endif; ?>
-					
-				</div>
 </div>
 			<!--<div class="container_s">
 				<div class="uk-text-center mt-m">
@@ -73,7 +78,7 @@
 <footer class="footer">
 <?php get_footer(); ?>
 </footer>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slick.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
 <script>
 $(function(){
