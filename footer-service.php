@@ -1,43 +1,59 @@
 <?php
 /**
- * サービス一覧（フッター上部）
+ * RECEPTIONISTシリーズについて
  */
 ?>
-<div class="service-index container">
-  <h2 class="service-index-title">RECEPTIONISTのサービス</h2>
-  <div class="service-cards uk-grid uk-grid-small uk-child-width-1-3@m" uk-grid>
-    <div>
-      <a href="https://receptionist.jp/" class="service-card" target="_blank" rel="noopener">
-        <div class="service-card-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/services/img_reception_small.png" alt="RECEPTIONIST">
-        </div>
-        <div class="service-card-body">
-          <p class="service-card-label">クラウド受付システム</p>
-          <h3 class="service-card-name">RECEPTIONIST</h3>
-        </div>
-      </a>
-    </div>
-    <div>
-      <a href="https://scheduling.receptionist.jp/" class="service-card" target="_blank" rel="noopener">
-        <div class="service-card-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/services/img_cheduling_kv_small.png" alt="調整アポ">
-        </div>
-        <div class="service-card-body">
-          <p class="service-card-label">日程調整ツール</p>
-          <h3 class="service-card-name">調整アポ</h3>
-        </div>
-      </a>
-    </div>
-    <div>
-      <a href="<?php echo home_url('/'); ?>" class="service-card current">
-        <div class="service-card-icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/services/img_meetingroom_small.png" alt="予約ルームズ">
-        </div>
-        <div class="service-card-body">
-          <p class="service-card-label">会議室予約システム</p>
-          <h3 class="service-card-name">予約ルームズ</h3>
-        </div>
-      </a>
-    </div>
-  </div>
+<div class="container">
+	<h3 class="uk-text-center">RECEPTIONISTシリーズについて</h3>
+	<p class="b1 uk-text-center">RECEPTIONISTシリーズは、ビジネス上のつながりをテクノロジーでスマートにすることで<br class="pc">各従業員が本来やるべき業務に集中でき、働きやすい環境に変えていくクラウドサービス群です。</p>
+	<div class="uk-grid uk-child-width-1-3@m" uk-grid>
+		<div class="card-box">
+			<div class="uk-card">
+				<a href="https://scheduling.receptionist.jp/" target="_blank" rel="noopener">
+					<div class="tit-box">
+						<div class="icon-box">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon_scheduling.svg" alt="調整アポ">
+						</div>
+						<h3><small>日程調整ツール</small>調整アポ</h3>
+					</div>
+					<p>日程調整がコピペで終わる</p>
+					<div class="img-box">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/img_scheduling.webp" alt="調整アポ">
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="card-box">
+			<div class="uk-card">
+				<a href="https://receptionist.jp/" target="_blank" rel="noopener">
+					<div class="tit-box">
+						<div class="icon-box">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon_receptionist.svg" alt="RECEPTIONIST">
+						</div>
+						<h3><small>受付システム</small>RECEPTIONIST</h3>
+					</div>
+					<p>来客受付業務をシンプルに</p>
+					<div class="img-box">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/img_receptionist.webp" alt="RECEPTIONIST">
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="card-box">
+			<div class="uk-card current">
+				<a href="<?php echo home_url('/'); ?>">
+					<div class="tit-box">
+						<div class="icon-box">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/icon_rooms.svg" alt="予約ルームズ">
+						</div>
+						<h3><small>会議室予約システム</small>予約ルームズ</h3>
+					</div>
+					<p>会議室の利用マナーを整える</p>
+					<div class="img-box">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/img_rooms.webp" alt="予約ルームズ">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
