@@ -3,15 +3,25 @@
  * sections/voice.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 .top_voice {
-	padding: var(--spacing-l) 0;
-	background-color: var(--light-gray-lightest);
+	padding: 80px 0;
+	background-color: #f1f5f9;
 }
 
 .top_voice h3 {
-	margin-bottom: var(--spacing-m);
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 2.375em;
+	font-weight: bold;
+	color: #112d48;
 }
 
+/* ======================
+   Card Container
+   ====================== */
 .top_voice .normal-index-wrap {
 	max-width: 1144px;
 	margin: 0 auto;
@@ -26,8 +36,11 @@
 	text-decoration: none;
 }
 
+/* ======================
+   Card
+   ====================== */
 .top_voice .uk-card {
-	background: var(--light-white);
+	background: #fff;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -39,6 +52,9 @@
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
+/* ======================
+   Card Media
+   ====================== */
 .top_voice .uk-card-media-top {
 	position: relative;
 }
@@ -55,7 +71,7 @@
 	left: 20px;
 	width: 80px;
 	height: 50px;
-	background: var(--light-white);
+	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	display: flex;
@@ -70,6 +86,9 @@
 	object-fit: contain;
 }
 
+/* ======================
+   Card Body
+   ====================== */
 .top_voice .uk-card-body {
 	padding: 40px 20px 20px;
 }
@@ -77,29 +96,29 @@
 .top_voice .uk-card-body h4 {
 	font-size: 1em;
 	font-weight: bold;
-	color: var(--light-black);
+	color: #112d48;
 	line-height: 1.6;
-	margin-bottom: var(--spacing-s);
+	margin-bottom: 20px;
 	min-height: 3.2em;
 }
 
 .top_voice .corp_name {
 	font-size: 0.875em;
 	font-weight: bold;
-	color: var(--light-black);
+	color: #112d48;
 	margin-bottom: 0.25em;
 }
 
 .top_voice .spec {
 	font-size: 0.75em;
-	color: var(--light-gray-dark);
-	margin-bottom: var(--spacing-s);
+	color: #66657c;
+	margin-bottom: 20px;
 }
 
 .top_voice .case_cta_click {
 	font-size: 0.875em;
 	font-weight: bold;
-	color: var(--accent-dark);
+	color: #00aed4;
 }
 
 .top_voice .case_cta_click i {
@@ -111,30 +130,48 @@
 	transform: translateX(5px);
 }
 
-/* Section CTA Button */
+/* ======================
+   Section CTA Button
+   ====================== */
 .top_voice .section_cta {
 	display: block;
 	width: fit-content;
-	margin: var(--spacing-m) auto 0;
+	margin: 40px auto 0;
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media screen and (max-width: 767px) {
 	.top_voice {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
+	}
+
+	.top_voice h3 {
+		font-size: 1.75em;
+		margin-bottom: 20px;
 	}
 
 	.top_voice .normal-index-box {
 		padding: 0;
-		margin-bottom: var(--spacing-s);
+		margin-bottom: 12px;
 	}
 
 	.top_voice .uk-card-media-top img {
 		height: 150px;
 	}
 
+	.top_voice .uk-card-body {
+		padding: 30px 15px 15px;
+	}
+
 	.top_voice .uk-card-body h4 {
 		font-size: 0.875em;
 		min-height: auto;
+		margin-bottom: 12px;
+	}
+
+	.top_voice .section_cta {
+		margin-top: 20px;
 	}
 }

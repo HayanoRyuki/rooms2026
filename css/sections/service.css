@@ -3,30 +3,43 @@
  * sections/service.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 .service-index-wrap {
-	background-color: var(--light-gray-lightest);
-	padding: var(--spacing-l) 0 110px;
+	background-color: #f1f5f9;
+	padding: 80px 0 110px;
 }
 
 .service-index-wrap h3 {
-	margin-bottom: var(--spacing-m);
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 2.375em;
+	font-weight: bold;
+	color: #112d48;
 }
 
+/* ======================
+   Grid
+   ====================== */
 .service-index-wrap .uk-grid {
-	margin-top: var(--spacing-m);
+	margin-top: 40px;
 	max-width: 1144px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/* ======================
+   Card Box
+   ====================== */
 .service-index-wrap .card-box {
 	padding: 0 15px;
 }
 
 .service-index-wrap .card-box .uk-card {
 	box-shadow: 20px 20px 20px 0 rgba(125, 134, 136, 0.1);
-	border: solid 1px var(--light-gray-lightest);
-	background-color: var(--light-white);
+	border: solid 1px #f1f5f9;
+	background-color: #fff;
 	border-radius: 10px;
 	padding: 0;
 	transition: transform 0.5s ease;
@@ -42,6 +55,9 @@
 	text-decoration: none;
 }
 
+/* ======================
+   Title Box
+   ====================== */
 .service-index-wrap .card-box .tit-box {
 	display: flex;
 	justify-content: space-between;
@@ -52,7 +68,7 @@
 	max-width: 55px;
 	width: 18.5%;
 	aspect-ratio: 1 / 1;
-	margin: 0 var(--spacing-s) 10px 0;
+	margin: 0 20px 10px 0;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
@@ -67,6 +83,7 @@
 	width: 80%;
 	font-size: 1.75em;
 	letter-spacing: 0.14px;
+	margin-bottom: 0;
 }
 
 .service-index-wrap .card-box .tit-box h3 small {
@@ -75,11 +92,14 @@
 	line-height: 1.33;
 	letter-spacing: 0.12px;
 	text-align: left;
-	color: var(--light-gray-dark);
+	color: #66657c;
 }
 
+/* ======================
+   Image Box
+   ====================== */
 .service-index-wrap .card-box .img-box {
-	margin-top: var(--spacing-s);
+	margin-top: 20px;
 }
 
 .service-index-wrap .card-box .img-box img {
@@ -88,18 +108,41 @@
 	border-radius: 5px;
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media only screen and (max-width: 767px) {
 	.service-index-wrap {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
+	}
+
+	.service-index-wrap h3 {
+		font-size: 1.75em;
+		margin-bottom: 20px;
+	}
+
+	.service-index-wrap .uk-grid {
+		margin-top: 20px;
 	}
 
 	.service-index-wrap .card-box {
 		padding: 0;
-		margin-bottom: var(--spacing-s);
+		margin-bottom: 12px;
+	}
+
+	.service-index-wrap .card-box .uk-card a {
+		padding: 20px;
+	}
+
+	.service-index-wrap .card-box .tit-box .icon-box {
+		margin: 0 12px 0 0;
 	}
 
 	.service-index-wrap .card-box .tit-box h3 {
 		font-size: 1.25em;
+	}
+
+	.service-index-wrap .card-box .img-box {
+		margin-top: 12px;
 	}
 }

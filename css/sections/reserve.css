@@ -3,85 +3,45 @@
  * sections/reserve.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 #top_reserve {
-	padding: var(--spacing-l) 0;
-	background-color: var(--light-white);
+	padding: 80px 0;
+	background-color: #fff;
 }
 
 #top_reserve h3 {
 	text-align: center;
 	font-size: 2em;
 	font-weight: bold;
-	color: var(--light-black);
-	margin-bottom: var(--spacing-m);
+	color: #112d48;
+	margin-bottom: 40px;
 }
 
+/* ======================
+   Sub-sections
+   ====================== */
 .top_reserve01,
 .top_reserve02 {
 	max-width: 1144px;
-	margin: 0 auto var(--spacing-m);
+	margin: 0 auto 40px;
 	padding: 0 5%;
 }
 
-.top_reserve01 ul,
-.top_reserve02 ul {
-	display: flex;
-	justify-content: center;
-	gap: var(--spacing-s);
-	list-style: none;
-}
-
-.top_reserve01 ul li,
-.top_reserve02 ul li {
-	flex: 1;
-	max-width: 340px;
-	background: var(--light-white);
-	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-	transition: transform 0.3s ease;
-}
-
-.top_reserve01 ul li:hover,
-.top_reserve02 ul li:hover {
-	transform: translateY(-3px);
-}
-
-.top_reserve_text {
-	padding: var(--spacing-s);
-}
-
-.top_reserve_text h4 {
-	font-size: 1.125em;
-	font-weight: bold;
-	color: var(--light-black);
-	margin-bottom: 0.5em;
-}
-
-.top_reserve_text p {
-	font-size: 0.875em;
-	color: var(--light-gray-dark);
-	line-height: 1.6;
-}
-
-.top_reserve01 ul li img,
-.top_reserve02 ul li img {
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
-/* Section Labels */
+/* ======================
+   Section Labels
+   ====================== */
 .top_reserve01::before {
 	content: "予約方法";
 	display: block;
 	text-align: center;
 	font-size: 0.875em;
 	font-weight: bold;
-	color: var(--accent-dark);
-	margin-bottom: var(--spacing-s);
+	color: #00aed4;
+	margin-bottom: 20px;
 	padding: 0.5em 1em;
-	background: var(--accent-light);
+	background: #ebfafe;
 	border-radius: 20px;
 	width: fit-content;
 	margin-left: auto;
@@ -94,35 +54,103 @@
 	text-align: center;
 	font-size: 0.875em;
 	font-weight: bold;
-	color: var(--accent-dark);
-	margin-bottom: var(--spacing-s);
+	color: #00aed4;
+	margin-bottom: 20px;
 	padding: 0.5em 1em;
-	background: var(--accent-light);
+	background: #ebfafe;
 	border-radius: 20px;
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* Mobile */
+/* ======================
+   Card List
+   ====================== */
+.top_reserve01 ul,
+.top_reserve02 ul {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	list-style: none;
+	padding: 0;
+}
+
+.top_reserve01 ul li,
+.top_reserve02 ul li {
+	flex: 1;
+	max-width: 340px;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+	transition: transform 0.3s ease;
+}
+
+.top_reserve01 ul li:hover,
+.top_reserve02 ul li:hover {
+	transform: translateY(-3px);
+}
+
+/* ======================
+   Card Text
+   ====================== */
+.top_reserve_text {
+	padding: 20px;
+}
+
+.top_reserve_text h4 {
+	font-size: 1.125em;
+	font-weight: bold;
+	color: #112d48;
+	margin-bottom: 0.5em;
+}
+
+.top_reserve_text p {
+	font-size: 0.875em;
+	color: #66657c;
+	line-height: 1.6;
+}
+
+/* ======================
+   Card Image
+   ====================== */
+.top_reserve01 ul li img,
+.top_reserve02 ul li img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media screen and (max-width: 767px) {
 	#top_reserve {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
 	}
 
 	#top_reserve h3 {
 		font-size: 1.5em;
+		margin-bottom: 20px;
 	}
 
 	.top_reserve01,
 	.top_reserve02 {
 		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.top_reserve01::before,
+	.top_reserve02::before {
+		margin-bottom: 12px;
 	}
 
 	.top_reserve01 ul,
 	.top_reserve02 ul {
 		flex-direction: column;
 		align-items: center;
+		gap: 12px;
 	}
 
 	.top_reserve01 ul li,
@@ -142,7 +170,7 @@
 
 	.top_reserve_text {
 		flex: 1;
-		padding: var(--spacing-s);
+		padding: 12px;
 	}
 
 	.top_reserve_text h4 {

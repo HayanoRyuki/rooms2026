@@ -3,15 +3,25 @@
  * sections/faq.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 .faq {
-	padding: var(--spacing-l) 0;
-	background-color: var(--light-white);
+	padding: 80px 0;
+	background-color: #fff;
 }
 
 .faq h2 {
-	margin-bottom: var(--spacing-m);
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 2.375em;
+	font-weight: bold;
+	color: #112d48;
 }
 
+/* ======================
+   FAQ List
+   ====================== */
 .faq-index-wrap {
 	list-style: none;
 	padding: 0;
@@ -20,18 +30,21 @@
 
 .faq-index-wrap li {
 	font-size: 1em;
-	padding: var(--spacing-m) 0;
-	border-bottom: var(--light-divider) 1px solid;
+	padding: 40px 0;
+	border-bottom: #d3d9e5 1px solid;
 }
 
 .faq-index-wrap li:first-child {
-	border-top: var(--light-divider) 1px solid;
+	border-top: #d3d9e5 1px solid;
 }
 
+/* ======================
+   Accordion Title
+   ====================== */
 .faq-index-wrap li a.uk-accordion-title {
 	display: block;
 	font-size: 1.25em;
-	color: var(--light-black);
+	color: #112d48;
 	font-weight: bold;
 	text-decoration: none;
 	position: relative;
@@ -44,17 +57,20 @@
 	line-height: 1.6;
 }
 
+/* ======================
+   Accordion Content
+   ====================== */
 .faq-index-wrap li .uk-accordion-content {
-	padding-top: var(--spacing-s);
+	padding-top: 20px;
 }
 
 .faq-index-wrap li .uk-accordion-content p {
-	color: var(--light-gray-dark);
+	color: #66657c;
 	line-height: 1.8;
 }
 
 .faq-index-wrap li .uk-accordion-content .btn {
-	margin-top: var(--spacing-s);
+	margin-top: 20px;
 	display: inline-block;
 }
 
@@ -62,7 +78,9 @@
 	margin-top: 0;
 }
 
-/* Accordion Icon */
+/* ======================
+   Accordion Icon
+   ====================== */
 .faq .uk-accordion-title::before {
 	content: "";
 	width: 1.4em;
@@ -79,14 +97,25 @@
 	background-image: url(https://icongr.am/fontawesome/chevron-up.svg?size=16&color=57c2e9);
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media only screen and (max-width: 767px) {
 	.faq {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
+	}
+
+	.faq h2 {
+		font-size: 1.75em;
+		margin-bottom: 20px;
 	}
 
 	.faq-hero {
-		background-color: var(--accent-light);
+		background-color: #ebfafe;
+	}
+
+	.faq-index-wrap li {
+		padding: 20px 0;
 	}
 
 	.faq-index-wrap li a.uk-accordion-title {

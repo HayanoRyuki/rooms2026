@@ -3,21 +3,27 @@
  * sections/cta-download.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 .bnr_dl_cta {
 	margin: 6.25vw 0 0;
 	padding: 0 35.5% 0 calc((100% - 89.5%) / 2);
-	background-color: var(--accent-dark);
+	background-color: #00aed4;
 	position: relative;
 }
 
 .bnr_dl_cta.bnr_page {
-	padding: var(--spacing-l) 0;
+	padding: 80px 0;
 }
 
 .bnr_dl_cta .bn-wrap {
 	display: flex;
 }
 
+/* ======================
+   Image Box
+   ====================== */
 .bnr_dl_cta .img-box {
 	width: 35.5%;
 	position: absolute;
@@ -30,30 +36,33 @@
 	height: auto;
 }
 
+/* ======================
+   Text Box
+   ====================== */
 .bnr_dl_cta .txt-box {
 	padding: 7.81vw 0 6.25vw;
 }
 
 .bnr_dl_cta .txt-box > * {
 	text-align: left;
-	color: var(--light-white);
+	color: #fff;
 }
 
 .bnr_dl_cta .txt-box h4,
 .bnr_dl_cta.bnr_page h4 {
 	font-size: 1.75em;
 	letter-spacing: 0.14px;
-	margin-bottom: var(--spacing-s);
-	color: var(--light-white);
+	margin-bottom: 20px;
+	color: #fff;
 }
 
 .bnr_dl_cta.bnr_page h4,
 .bnr_dl_cta.bnr_page p {
-	color: var(--light-white);
+	color: #fff;
 }
 
 .bnr_dl_cta .txt-box .b1 {
-	color: var(--light-white);
+	color: #fff;
 	line-height: 1.8;
 }
 
@@ -63,20 +72,25 @@
 
 .bnr_dl_cta.bnr_page .btn-box {
 	text-align: center;
-	margin-top: var(--spacing-m);
+	margin-top: 40px;
 }
 
+/* ======================
+   CTA Button
+   ====================== */
 .bnr_dl_cta .btn_dl {
 	background-color: #ff6262;
-	color: var(--light-white);
+	color: #fff;
 }
 
 .bnr_dl_cta .btn_dl:hover {
 	background-color: #ff7a7a;
-	color: var(--light-white);
+	color: #fff;
 }
 
-/* Medium Screen */
+/* ======================
+   Medium Screen (1279px以下)
+   ====================== */
 @media only screen and (max-width: 1279px) {
 	.bnr_dl_cta {
 		padding: 0 0 0 calc((100% - 89.5%) / 2);
@@ -98,10 +112,16 @@
 	}
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media only screen and (max-width: 767px) {
 	.bnr_dl_cta {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
+	}
+
+	.bnr_dl_cta.bnr_page {
+		padding: 36px 6%;
 	}
 
 	.bnr_dl_cta .bn-wrap {
@@ -115,7 +135,7 @@
 
 	.bnr_dl_cta .txt-box {
 		width: 100%;
-		padding: 0 0 var(--spacing-l);
+		padding: 0 0 36px;
 	}
 
 	.bnr_dl_cta .txt-box h4 {
@@ -127,7 +147,7 @@
 	}
 
 	.bnr_dl_cta .txt-box .btn-box {
-		margin-top: var(--spacing-m);
+		margin-top: 20px;
 	}
 
 	.bnr_dl_cta .txt-box .btn-box .btn {

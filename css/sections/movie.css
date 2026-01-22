@@ -3,8 +3,11 @@
  * sections/movie.php
  */
 
+/* ======================
+   Movie Container
+   ====================== */
 .movie-wrap {
-	margin-top: var(--spacing-m);
+	margin-top: 40px;
 	max-width: 1144px;
 	margin-left: auto;
 	margin-right: auto;
@@ -15,13 +18,16 @@
 }
 
 .movie-wrap .movie-box h4 {
-	margin-bottom: var(--spacing-s);
+	margin-bottom: 20px;
 	text-align: center;
 	font-size: 1.125em;
 	font-weight: bold;
-	color: var(--light-black);
+	color: #112d48;
 }
 
+/* ======================
+   Video Embed
+   ====================== */
 .movie-wrap .movie {
 	position: relative;
 	width: 100%;
@@ -40,15 +46,22 @@
 	border: none;
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media screen and (max-width: 767px) {
+	.movie-wrap {
+		margin-top: 20px;
+	}
+
 	.movie-wrap .movie-box {
 		padding: 0;
-		margin-bottom: var(--spacing-m);
+		margin-bottom: 20px;
 	}
 
 	.movie-wrap .movie-box h4 {
 		font-size: 1em;
+		margin-bottom: 12px;
 	}
 
 	.movie-wrap .movie {

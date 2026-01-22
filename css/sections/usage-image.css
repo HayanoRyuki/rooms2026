@@ -3,28 +3,38 @@
  * sections/usage-image.php
  */
 
+/* ======================
+   Section Container
+   ====================== */
 .rec-space {
-	padding: var(--spacing-l) 0;
-	background-color: var(--light-white);
+	padding: 80px 0;
+	background-color: #fff;
 }
 
 .rec-space h3 {
-	margin-bottom: var(--spacing-s);
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 2.375em;
+	font-weight: bold;
+	color: #112d48;
 }
 
 .rec-space_image {
 	text-align: center;
 	font-size: 1em;
-	color: var(--light-gray-dark);
-	margin-bottom: var(--spacing-m);
+	color: #66657c;
+	margin-bottom: 40px;
 	line-height: 1.8;
 }
 
+/* ======================
+   Image Grid
+   ====================== */
 .sec05_flex_Wrap {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: var(--spacing-s);
+	gap: 20px;
 	list-style: none;
 	max-width: 1144px;
 	margin: 0 auto;
@@ -32,7 +42,7 @@
 }
 
 .sec05_flex_Wrap li {
-	flex: 0 0 calc(33.333% - var(--spacing-s));
+	flex: 0 0 calc(33.333% - 14px);
 	max-width: 360px;
 }
 
@@ -48,15 +58,23 @@
 	transform: scale(1.02);
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media screen and (max-width: 767px) {
 	.rec-space {
-		padding: var(--spacing-l) 6%;
+		padding: 36px 6%;
+	}
+
+	.rec-space h3 {
+		font-size: 1.75em;
+		margin-bottom: 12px;
 	}
 
 	.rec-space_image {
 		font-size: 0.875em;
 		text-align: left;
+		margin-bottom: 20px;
 	}
 
 	.rec-space_image br {
@@ -65,11 +83,11 @@
 
 	.sec05_flex_Wrap {
 		padding: 0;
-		gap: var(--spacing-xs);
+		gap: 8px;
 	}
 
 	.sec05_flex_Wrap li {
-		flex: 0 0 calc(50% - var(--spacing-xs) / 2);
+		flex: 0 0 calc(50% - 4px);
 	}
 
 	.sec05_flex_Wrap li img {
