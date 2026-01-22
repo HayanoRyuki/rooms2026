@@ -4,44 +4,49 @@
  */
 ?>
 <header class="header">
-  <div class="header-inner uk-flex uk-flex-between uk-flex-middle">
-    <div class="header-logo">
-      <a href="<?php echo home_url('/'); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/img_logo_rooms.svg" alt="予約ルームズ">
-      </a>
-    </div>
-    <nav class="header-nav pc">
-      <ul class="nav-list uk-flex">
-        <li><a href="<?php echo home_url('/'); ?>">予約ルームズとは</a></li>
-        <li><a href="<?php echo home_url('/function/'); ?>">機能の紹介</a></li>
-        <li><a href="<?php echo home_url('/case/'); ?>">お客様の声</a></li>
-        <li><a href="<?php echo home_url('/faq/'); ?>">よくある質問</a></li>
-        <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
-      </ul>
-    </nav>
-    <div class="header-cta pc">
-      <a href="<?php echo home_url('/documents/'); ?>" class="btn btn-header-dl">
-        <i class="fas fa-file-download"></i> 資料請求
-      </a>
-    </div>
-    <button class="sp hamburger" id="js-hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
+	<div class="container">
+		<div class="h_top-block">
+			<div class="h_left">
+				<a href="<?php echo home_url('/'); ?>" class="logo-mark">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/img_logo_rooms.svg" alt="予約ルームズ" width="158" height="42">
+				</a>
+				<nav class="h_l_nav pc">
+					<ul>
+						<li><a href="<?php echo home_url('/'); ?>">機能について</a></li>
+						<li><a href="<?php echo home_url('/case/'); ?>">お客様の声</a></li>
+						<li><a href="<?php echo home_url('/price/'); ?>">料金表</a></li>
+						<li><a href="<?php echo home_url('/faq/'); ?>">よくあるご質問</a></li>
+						<li><a href="<?php echo home_url('/contact/'); ?>">問い合わせ</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="h_r_nav pc">
+				<ul>
+					<li><a href="<?php echo home_url('/document-price/'); ?>" class="btn btn-price">料金表をもらう</a></li>
+					<li><a href="<?php echo home_url('/documents/'); ?>" class="btn btn-dl">資料をもらう</a></li>
+				</ul>
+			</div>
+			<div class="navbar-burger sp" id="js-hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
 </header>
 
 <!-- SPメニュー -->
-<div class="sp-menu" id="js-sp-menu">
-  <nav class="sp-nav">
-    <ul>
-      <li><a href="<?php echo home_url('/'); ?>">予約ルームズとは</a></li>
-      <li><a href="<?php echo home_url('/function/'); ?>">機能の紹介</a></li>
-      <li><a href="<?php echo home_url('/case/'); ?>">お客様の声</a></li>
-      <li><a href="<?php echo home_url('/faq/'); ?>">よくある質問</a></li>
-      <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
-      <li><a href="<?php echo home_url('/documents/'); ?>" class="btn btn-sp-dl">資料請求</a></li>
-    </ul>
-  </nav>
+<div class="navbar-menu" id="js-sp-menu">
+	<div class="inner">
+		<nav class="h_nav_sp">
+			<a href="<?php echo home_url('/documents/'); ?>" class="btn btn-dl">資料をもらう</a>
+			<dl>
+				<dd><a href="<?php echo home_url('/'); ?>">機能について</a></dd>
+				<dd><a href="<?php echo home_url('/case/'); ?>">お客様の声</a></dd>
+				<dd><a href="<?php echo home_url('/price/'); ?>">料金表</a></dd>
+				<dd><a href="<?php echo home_url('/faq/'); ?>">よくあるご質問</a></dd>
+				<dd><a href="<?php echo home_url('/contact/'); ?>">問い合わせ</a></dd>
+			</dl>
+		</nav>
+	</div>
 </div>
