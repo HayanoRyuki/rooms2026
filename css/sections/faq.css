@@ -11,6 +11,12 @@
 	background-color: #fff;
 }
 
+.faq .container_s {
+	max-width: 900px;
+	width: 89.5%;
+	margin: 0 auto;
+}
+
 .faq h2 {
 	margin-bottom: 40px;
 	text-align: center;
@@ -28,13 +34,13 @@
 	margin: 0;
 }
 
-.faq-index-wrap li {
+.faq-index-wrap > li {
 	font-size: 1em;
-	padding: 40px 0;
+	padding: 24px 0;
 	border-bottom: #d3d9e5 1px solid;
 }
 
-.faq-index-wrap li:first-child {
+.faq-index-wrap > li:first-child {
 	border-top: #d3d9e5 1px solid;
 }
 
@@ -42,35 +48,41 @@
    Accordion Title
    ====================== */
 .faq-index-wrap li a.uk-accordion-title {
-	display: block;
-	font-size: 1.25em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.125em;
 	color: #112d48;
 	font-weight: bold;
 	text-decoration: none;
 	position: relative;
-	padding-right: 2em;
 }
 
 .faq-index-wrap li a.uk-accordion-title h3 {
 	font-size: 1em;
 	margin: 0;
 	line-height: 1.6;
+	flex: 1;
+	padding-right: 20px;
 }
 
 /* ======================
    Accordion Content
    ====================== */
 .faq-index-wrap li .uk-accordion-content {
-	padding-top: 20px;
+	padding-top: 16px;
+	margin-top: 0;
 }
 
 .faq-index-wrap li .uk-accordion-content p {
 	color: #66657c;
 	line-height: 1.8;
+	font-size: 1em;
+	margin: 0;
 }
 
 .faq-index-wrap li .uk-accordion-content .btn {
-	margin-top: 20px;
+	margin-top: 16px;
 	display: inline-block;
 }
 
@@ -83,18 +95,18 @@
    ====================== */
 .faq .uk-accordion-title::before {
 	content: "";
-	width: 1.4em;
-	height: 1.4em;
-	margin-left: 10px;
-	float: right;
-	background-image: url(https://icongr.am/fontawesome/chevron-down.svg?size=16&color=57c2e9);
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	background-image: url(https://icongr.am/fontawesome/chevron-down.svg?size=20&color=57c2e9);
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-position: center;
+	background-size: contain;
 	transition: transform 0.3s ease;
 }
 
 .faq .uk-open > .uk-accordion-title::before {
-	background-image: url(https://icongr.am/fontawesome/chevron-up.svg?size=16&color=57c2e9);
+	background-image: url(https://icongr.am/fontawesome/chevron-up.svg?size=20&color=57c2e9);
 }
 
 /* ======================
@@ -102,19 +114,20 @@
    ====================== */
 @media only screen and (max-width: 767px) {
 	.faq {
-		padding: 36px 6%;
+		padding: 60px 0;
+	}
+
+	.faq .container_s {
+		width: 100%;
+		padding: 0 6.4%;
 	}
 
 	.faq h2 {
 		font-size: 1.75em;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 	}
 
-	.faq-hero {
-		background-color: #ebfafe;
-	}
-
-	.faq-index-wrap li {
+	.faq-index-wrap > li {
 		padding: 20px 0;
 	}
 
@@ -124,6 +137,10 @@
 
 	.faq-index-wrap li a.uk-accordion-title h3 {
 		font-size: 1em;
+	}
+
+	.faq-index-wrap li .uk-accordion-content p {
+		font-size: 0.9375em;
 	}
 
 	.faq-index-wrap li .btn {
