@@ -87,12 +87,31 @@ function theme_enqueue_scripts() {
 
 	// セクション用CSS（トップページのみ）
 	if ( is_front_page() ) {
-		wp_enqueue_style(
-			'sections',
-			$theme_uri . '/css/sections.css',
-			array( 'theme-style' ),
-			null
+		$sections = array(
+			'hero',
+			'logo-slider',
+			'boxil',
+			'capabilities',
+			'management',
+			'analytics',
+			'reserve',
+			'voice',
+			'usage-image',
+			'multi-tenant',
+			'recommend',
+			'movie',
+			'cta-download',
+			'faq',
+			'service',
 		);
+		foreach ( $sections as $section ) {
+			wp_enqueue_style(
+				'section-' . $section,
+				$theme_uri . '/css/sections/' . $section . '.css',
+				array( 'theme-style' ),
+				null
+			);
+		}
 	}
 
 	// カスタム投稿タイプ用CSS

@@ -19,7 +19,7 @@
 .top .hero.page-title.wrapper .hero-body .container_l {
 	width:64%;
 	padding:85px 1.6% 0 0;
-	background: url("../../img/meetignroom_kv.svg") no-repeat right 14px bottom;
+	background: url("../img/meetignroom_kv.svg") no-repeat right 14px bottom;
 	background-size: 49% auto;
 	margin:0;
 }
@@ -236,7 +236,7 @@ input[type="button"]:focus {
 	.top .hero.page-title.wrapper .hero-body .container_l {
 		width:64%;
 		padding:85px 1.6% 0 0;
-		background: url("../../img/meetignroom_kv.svg") no-repeat right 14px bottom;
+		background: url("../img/meetignroom_kv.svg") no-repeat right 14px bottom;
 		background-size: 49% auto;
 	}
 	.top .hero.page-title.wrapper .hero-body .container_r {
@@ -255,7 +255,7 @@ input[type="button"]:focus {
 	.top .hero.page-title.wrapper .hero-body .container_l {
 		width: 100%;
 		padding:var(--spacing-s) 3% 0;
-		background: url("../../img/meetignroom_kv.svg") no-repeat right 6% bottom;
+		background: url(../img/meetignroom_kv.svg) no-repeat right 6% bottom;
 		background-size: 30% auto;
 	}
 	.mv_txt-box h4 {
