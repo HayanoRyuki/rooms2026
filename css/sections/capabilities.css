@@ -8,15 +8,11 @@
    ====================== */
 .capabilities {
 	padding: 80px 0;
-	background-color: #ebfafe;
-}
-
-.capabilities .container {
-	text-align: center;
+	background-color: #fff;
 }
 
 .capabilities h3 {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 	font-size: 2.375em;
 	font-weight: bold;
 	color: #112d48;
@@ -29,10 +25,10 @@
 .capabilities_ul {
 	display: flex;
 	justify-content: center;
-	gap: 40px;
+	gap: 30px;
 	max-width: 1144px;
 	margin: 0 auto;
-	padding: 0 5%;
+	padding: 0;
 	list-style: none;
 }
 
@@ -47,35 +43,45 @@
    ====================== */
 .capabilities_ul_li a {
 	display: block;
-	background: #fff;
-	border-radius: 10px;
-	overflow: hidden;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	text-decoration: none;
+	text-align: center;
 }
 
-.capabilities_ul_li a:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+.capabilities_ul_li a:hover .capabilities_img img {
+	transform: scale(1.03);
+}
+
+/* ======================
+   Number
+   ====================== */
+.capabilities_num {
+	margin-bottom: 8px;
+}
+
+.capabilities_num .en {
+	font-family: 'Barlow', sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #57c2e9;
+	line-height: 1;
 }
 
 /* ======================
    Card Title
    ====================== */
 .capabilities_ul_li h4 {
-	padding: 20px;
-	font-size: 1.125em;
+	font-size: 1.375em;
 	font-weight: bold;
 	color: #112d48;
 	text-align: center;
 	line-height: 1.5;
+	margin-bottom: 20px;
 }
 
 .capabilities_ul_li h4 span {
 	display: block;
-	font-size: 0.75em;
-	color: #00aed4;
+	font-size: 0.65em;
+	color: #66657c;
 	font-weight: bold;
 	margin-bottom: 4px;
 }
@@ -83,10 +89,16 @@
 /* ======================
    Card Image
    ====================== */
-.capabilities_ul_li img {
+.capabilities_img {
+	overflow: hidden;
+	border-radius: 8px;
+}
+
+.capabilities_img img {
 	width: 100%;
 	height: auto;
 	display: block;
+	transition: transform 0.3s ease;
 }
 
 /* ======================
@@ -94,19 +106,24 @@
    ====================== */
 @media screen and (max-width: 767px) {
 	.capabilities {
-		padding: 36px 6%;
+		padding: 60px 0;
+	}
+
+	.capabilities .container {
+		width: 100%;
+		padding: 0 6.4%;
 	}
 
 	.capabilities h3 {
 		font-size: 1.75em;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 
-	.capabilities_ul {
+	.capabilities_ul.container {
 		flex-direction: column;
 		align-items: center;
-		gap: 12px;
-		padding: 0;
+		gap: 24px;
+		padding: 0 6.4%;
 	}
 
 	.capabilities_ul_li {
@@ -114,21 +131,26 @@
 		max-width: 100%;
 	}
 
-	.capabilities_ul_li a {
-		display: flex;
-		align-items: center;
-		padding: 12px;
+	.capabilities_num .en {
+		font-size: 2em;
 	}
 
 	.capabilities_ul_li h4 {
-		flex: 1;
-		padding: 0 12px 0 0;
-		text-align: left;
-		font-size: 1em;
+		font-size: 1.125em;
+		margin-bottom: 12px;
 	}
 
-	.capabilities_ul_li img {
-		width: 40%;
-		border-radius: 5px;
+	.capabilities_ul_li h4 span {
+		font-size: 0.7em;
+	}
+}
+
+/* ======================
+   Desktop (1280px以上)
+   ====================== */
+@media only screen and (min-width: 1280px) {
+	.capabilities_ul {
+		max-width: 1144px;
+		width: 100%;
 	}
 }
