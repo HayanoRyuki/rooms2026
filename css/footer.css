@@ -1,257 +1,256 @@
 /**
- * フッター用CSS
+ * フッター用CSS - 本番準拠
  */
 
 /* ======================
-   Footer Navigation
+   Footer Container
    ====================== */
+.footer,
 .foot-nav-wrapper {
-  background: var(--light-gray-lightest);
-  padding: var(--spacing-l) 0;
+	background-color: #f1f5f9;
+	padding: 80px 0 60px;
 }
 
-.foot-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.f-logo {
-  margin-bottom: 20px;
-}
-
-.f-logo img {
-  max-width: 180px;
-  height: auto;
-}
-
-.pmark {
-  margin-top: 15px;
-}
-
-.pmark img {
-  max-width: 80px;
-  height: auto;
+.foot-nav.container {
+	max-width: 1144px;
+	width: 89.5%;
+	margin: 0 auto;
 }
 
 /* ======================
-   Footer Nav Lists
+   Main Grid Layout
    ====================== */
-.tit-box {
-  margin-bottom: 15px;
-  cursor: pointer;
+.foot-nav > .uk-flex {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.tit-box h6 {
-  font-size: 0.875em;
-  font-weight: bold;
-  color: var(--light-black);
-  margin: 0;
+/* ======================
+   Logo Column (Left)
+   ====================== */
+.foot-nav .f-logo {
+	width: 50%;
 }
 
-.tit-box h6 small {
-  display: block;
-  font-size: 0.75em;
-  font-weight: normal;
-  color: var(--light-gray-dark);
-  margin-bottom: 5px;
+.foot-nav .f-logo a {
+	display: inline-block;
 }
 
-.tit-box h6 a {
-  color: var(--light-black);
-  text-decoration: none;
+.foot-nav .f-logo > a > img {
+	width: 160px;
+	height: auto;
 }
 
-.tit-box span {
-  display: none;
+.foot-nav .pmark {
+	margin-top: 30px;
 }
 
+.foot-nav .pmark img {
+	width: 130px;
+	height: auto;
+}
+
+/* ======================
+   Navigation Columns
+   ====================== */
+.foot-nav .tit-box {
+	margin-bottom: 25px;
+}
+
+.foot-nav .tit-box h6 {
+	font-size: 1em;
+	font-weight: bold;
+	color: #112d48;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.foot-nav .tit-box h6 small {
+	display: block;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #66657c;
+	margin-bottom: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.12px;
+}
+
+.foot-nav .tit-box h6 a {
+	color: #112d48;
+	text-decoration: none;
+}
+
+.foot-nav .tit-box h6 a:hover {
+	color: #00aed4;
+}
+
+.foot-nav .tit-box span {
+	display: none;
+}
+
+/* ======================
+   Nav List
+   ====================== */
 .f-nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .f-nav-list li {
-  margin-bottom: 10px;
+	font-size: 0.8125em;
+	line-height: 2.46;
+	letter-spacing: 1px;
+	text-align: left;
 }
 
 .f-nav-list li a {
-  font-size: 0.8em;
-  color: var(--light-gray-dark);
-  text-decoration: none;
-  transition: color 0.3s ease;
+	color: #66657c;
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 .f-nav-list li a:hover {
-  color: var(--accent-default);
+	color: #00aed4;
 }
 
 /* ======================
-   Footer Sub Navigation
+   Sub Navigation
    ====================== */
 .f_s_nav {
-  margin-top: var(--spacing-m);
-  padding-top: var(--spacing-s);
-  border-top: 1px solid var(--light-divider);
+	width: 100%;
+	margin-top: 80px;
 }
 
 .f_s_nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.f_s_nav ul li {
+	padding-right: 1rem;
+	font-size: 0.75em;
+	color: #66657c;
 }
 
 .f_s_nav ul li a {
-  font-size: 0.75em;
-  color: var(--light-gray-dark);
-  text-decoration: none;
+	color: #66657c;
+	text-decoration: none;
 }
 
 .f_s_nav ul li a:hover {
-  color: var(--accent-default);
+	color: #00aed4;
 }
 
 /* ======================
    Copyright
    ====================== */
-.f-copyright {
-  text-align: center;
-  margin-top: var(--spacing-s);
-  color: var(--light-gray-dark);
+.f-copyright,
+.f-copyright.uk-grid-margin {
+	text-align: left;
+	margin-top: 20px;
 }
 
 .f-copyright small {
-  font-size: 0.75em;
+	font-size: 10px;
+	font-weight: lighter;
+	line-height: 1.5;
+	letter-spacing: 0.77px;
+	color: #66657c;
+	font-family: 'Barlow', sans-serif;
 }
 
 /* ======================
-   Service Index（フッター上部）
+   Mobile (768px以下)
    ====================== */
-.service-index-wrap {
-  background: var(--light-white);
-  padding: var(--spacing-l) 0;
-  border-top: 1px solid var(--light-divider);
-}
+@media only screen and (max-width: 768px) {
+	.footer,
+	.foot-nav-wrapper {
+		padding: 60px 0 30px;
+	}
 
-.service-index {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+	.foot-nav.container {
+		width: 100%;
+		padding: 0 6.4%;
+	}
 
-.service-index-title {
-  font-size: 1.25em;
-  font-weight: bold;
-  color: var(--light-black);
-  text-align: center;
-  margin-bottom: var(--spacing-m);
-}
+	/* Logo - hidden on mobile */
+	.foot-nav .f-logo {
+		display: none;
+	}
 
-.service-card {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background: var(--light-gray-lightest);
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+	/* Grid Reset */
+	.foot-nav .uk-grid > * {
+		padding-left: 0;
+	}
 
-.service-card:hover {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
-}
+	.foot-nav .uk-grid {
+		margin-left: 0;
+	}
 
-.service-card.current {
-  background: var(--accent-light);
-  border: 2px solid var(--accent-default);
-}
+	/* Title Box - Accordion Style */
+	.foot-nav .tit-box {
+		position: relative;
+		margin-bottom: 12px;
+	}
 
-.service-card-icon {
-  width: 60px;
-  height: 60px;
-  flex-shrink: 0;
-  margin-right: 15px;
-}
+	.foot-nav .tit-box h6 small {
+		display: none;
+	}
 
-.service-card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+	.foot-nav .tit-box span {
+		display: inline;
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: #66657c;
+	}
 
-.service-card-label {
-  font-size: 0.7em;
-  color: var(--light-gray-dark);
-  margin-bottom: 3px;
-}
+	.foot-nav .tit-box span.open i:before {
+		content: "\f106";
+	}
 
-.service-card-name {
-  font-size: 1em;
-  font-weight: bold;
-  color: var(--light-black);
-  margin: 0;
+	/* Nav List */
+	.f-nav-list {
+		display: none;
+	}
+
+	.f-nav-list.is-show {
+		display: block;
+	}
+
+	/* Sub Nav */
+	.f_s_nav {
+		margin-top: 40px;
+	}
+
+	.f_s_nav ul {
+		display: block;
+	}
+
+	.f_s_nav ul li {
+		display: inline;
+		font-size: 1em;
+	}
+
+	/* Copyright */
+	.f-copyright small {
+		font-size: 10px;
+		color: #c3cbcd;
+	}
 }
 
 /* ======================
-   Responsive
+   Desktop min-width 1280px
    ====================== */
-@media screen and (max-width: 767px) {
-  .foot-nav-wrapper {
-    padding: var(--spacing-m) 6%;
-  }
-
-  .tit-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--light-divider);
-  }
-
-  .tit-box span {
-    display: block;
-    color: var(--light-gray-dark);
-  }
-
-  .f-nav-list {
-    display: none;
-    padding: 10px 0;
-  }
-
-  .f-nav-list.open {
-    display: block;
-  }
-
-  .f_s_nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .f_s_nav ul li:nth-child(even) {
-    display: none;
-  }
-
-  .service-index-wrap {
-    padding: var(--spacing-m) 6%;
-  }
-
-  .service-cards > div {
-    margin-bottom: 15px;
-  }
-
-  .service-card {
-    padding: 15px;
-  }
-
-  .service-card-icon {
-    width: 50px;
-    height: 50px;
-  }
+@media only screen and (min-width: 1280px) {
+	.foot-nav.container {
+		max-width: 1144px;
+		width: 100%;
+	}
 }
