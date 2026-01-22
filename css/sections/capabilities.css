@@ -1,0 +1,102 @@
+/**
+ * Capabilities Section - 予約ルームズでできること
+ * sections/capabilities.php
+ */
+
+.capabilities {
+	padding: var(--spacing-l) 0;
+	background-color: var(--accent-light);
+}
+
+.capabilities h3 {
+	margin-bottom: var(--spacing-m);
+}
+
+.capabilities_ul {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-m);
+	max-width: 1144px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+.capabilities_ul_li {
+	flex: 1;
+	max-width: 368px;
+	list-style: none;
+}
+
+.capabilities_ul_li a {
+	display: block;
+	background: var(--light-white);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capabilities_ul_li a:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.capabilities_ul_li h4 {
+	padding: var(--spacing-s);
+	font-size: 1.125em;
+	font-weight: bold;
+	color: var(--light-black);
+	text-align: center;
+	line-height: 1.5;
+}
+
+.capabilities_ul_li h4 span {
+	display: block;
+	font-size: 0.75em;
+	color: var(--accent-dark);
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.capabilities_ul_li img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	.capabilities {
+		padding: var(--spacing-l) 6%;
+	}
+
+	.capabilities_ul {
+		flex-direction: column;
+		align-items: center;
+		gap: var(--spacing-s);
+		padding: 0;
+	}
+
+	.capabilities_ul_li {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.capabilities_ul_li a {
+		display: flex;
+		align-items: center;
+		padding: var(--spacing-s);
+	}
+
+	.capabilities_ul_li h4 {
+		flex: 1;
+		padding: 0 var(--spacing-s) 0 0;
+		text-align: left;
+		font-size: 1em;
+	}
+
+	.capabilities_ul_li img {
+		width: 40%;
+		border-radius: 5px;
+	}
+}

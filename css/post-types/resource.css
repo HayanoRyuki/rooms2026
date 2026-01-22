@@ -1,0 +1,468 @@
+/**
+ * お役立ち資料（resource）用CSS
+ * archive-resource.php / single-resource.php
+ */
+
+/* ======================
+   Archive - 一覧ページ
+   ====================== */
+.resource-archive {
+  padding: var(--spacing-l) 0;
+}
+
+/* フィルター */
+.resource-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: var(--spacing-m);
+}
+
+.resource-filter .filter-btn {
+  padding: 8px 20px;
+  border: 1px solid var(--light-divider);
+  border-radius: 30px;
+  font-size: 0.875em;
+  font-weight: bold;
+  color: var(--light-gray-dark);
+  background: var(--light-white);
+  transition: all 0.3s ease;
+}
+
+.resource-filter .filter-btn:hover,
+.resource-filter .filter-btn.active {
+  background: var(--accent-default);
+  border-color: var(--accent-default);
+  color: var(--light-white);
+}
+
+/* カードグリッド */
+.resource-grid {
+  margin-top: var(--spacing-m);
+}
+
+.resource-card {
+  margin-bottom: var(--spacing-m);
+}
+
+.resource-card .uk-card {
+  background: var(--light-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card .uk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.resource-card .card-media {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-light) 0%, #e0f4fa 100%);
+}
+
+.resource-card .card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.resource-card .card-image-placeholder {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-light) 0%, #e0f4fa 100%);
+}
+
+.resource-card .card-image-placeholder i {
+  font-size: 4em;
+  color: var(--accent-default);
+  opacity: 0.5;
+}
+
+.resource-card .resource-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 12px;
+  background: var(--accent-dark);
+  color: var(--light-white);
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.resource-card .card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card .card-title {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--light-black);
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.resource-card .card-excerpt {
+  font-size: 0.875em;
+  color: var(--light-gray-dark);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.resource-card .btn-download {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  padding: 0;
+  background: var(--accent-dark);
+  color: var(--light-white);
+  border-radius: 5px;
+  font-size: 0.875em;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: none;
+}
+
+.resource-card .btn-download:hover {
+  background: var(--accent-default);
+}
+
+.resource-card .btn-download i {
+  margin-right: 8px;
+}
+
+/* ======================
+   Single - 詳細ページ
+   ====================== */
+.resource-single {
+  padding: var(--spacing-m) 0 var(--spacing-l);
+}
+
+.resource-content-wrap {
+  gap: var(--spacing-m);
+}
+
+.resource-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-sidebar {
+  width: 380px;
+  flex-shrink: 0;
+}
+
+/* ヘッダー */
+.resource-header {
+  margin-bottom: var(--spacing-m);
+}
+
+.resource-categories {
+  margin-bottom: 15px;
+}
+
+.resource-category-tag {
+  display: inline-block;
+  padding: 5px 15px;
+  background: var(--accent-dark);
+  color: var(--light-white);
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.resource-category-tag:hover {
+  background: var(--accent-default);
+  color: var(--light-white);
+}
+
+.resource-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--light-black);
+  line-height: 1.4;
+}
+
+/* アイキャッチ */
+.resource-featured-image {
+  margin-bottom: var(--spacing-m);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.resource-featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* 本文 */
+.resource-body {
+  margin-bottom: var(--spacing-m);
+}
+
+.resource-body p {
+  font-size: 1em;
+  line-height: 1.8;
+  color: var(--light-gray-dark);
+  margin-bottom: 1em;
+}
+
+/* ポイント */
+.resource-points {
+  background: var(--accent-light);
+  border-radius: 10px;
+  padding: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+
+.points-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--light-black);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--accent-default);
+}
+
+.points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: var(--light-black);
+  line-height: 1.6;
+}
+
+.points-list li:last-child {
+  margin-bottom: 0;
+}
+
+.points-list li i {
+  color: var(--accent-dark);
+  margin-right: 12px;
+  margin-top: 3px;
+  font-size: 1.1em;
+}
+
+/* 関連資料 */
+.related-resources {
+  border-top: 1px solid var(--light-divider);
+  padding-top: var(--spacing-m);
+}
+
+.related-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--light-black);
+  margin-bottom: var(--spacing-s);
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+}
+
+.related-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.related-card-title {
+  font-size: 0.875em;
+  font-weight: bold;
+  color: var(--light-black);
+  line-height: 1.5;
+}
+
+.related-card:hover .related-card-title {
+  color: var(--accent-dark);
+}
+
+/* サイドバー - ダウンロードフォーム */
+.download-form-box {
+  background: var(--light-white);
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-m);
+  position: sticky;
+  top: 100px;
+}
+
+.form-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: var(--light-black);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-description {
+  font-size: 0.875em;
+  color: var(--light-gray-dark);
+  text-align: center;
+  margin-bottom: var(--spacing-s);
+  line-height: 1.6;
+}
+
+#resource-download-form .form-group {
+  margin-bottom: 15px;
+}
+
+#resource-download-form label {
+  display: block;
+  font-size: 0.875em;
+  font-weight: bold;
+  color: var(--light-black);
+  margin-bottom: 8px;
+}
+
+#resource-download-form label .required {
+  color: var(--error);
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+#resource-download-form input[type="text"],
+#resource-download-form input[type="email"],
+#resource-download-form input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--light-divider);
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+#resource-download-form input:focus {
+  outline: none;
+  border-color: var(--accent-default);
+}
+
+#resource-download-form .name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+#resource-download-form .name-fields input {
+  flex: 1;
+}
+
+#resource-download-form .form-agree {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#resource-download-form .form-agree input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  visibility: visible;
+}
+
+#resource-download-form .form-agree label {
+  font-size: 0.875em;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+#resource-download-form .form-agree a {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+#resource-download-form .btn-submit {
+  width: 100%;
+  height: 50px;
+  background: #ff6262;
+  color: var(--light-white);
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #e45959;
+  transition: all 0.3s ease;
+}
+
+#resource-download-form .btn-submit:hover {
+  background: #ff7a7a;
+}
+
+#resource-download-form .btn-submit i {
+  margin-right: 8px;
+}
+
+/* ======================
+   Responsive
+   ====================== */
+@media screen and (max-width: 767px) {
+  .resource-archive {
+    padding: var(--spacing-l) 6%;
+  }
+
+  .resource-filter {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
+
+  .resource-card .card-image,
+  .resource-card .card-image-placeholder {
+    height: 150px;
+  }
+
+  .resource-single {
+    padding: var(--spacing-s) 6% var(--spacing-l);
+  }
+
+  .resource-content-wrap {
+    flex-direction: column;
+  }
+
+  .resource-sidebar {
+    width: 100%;
+    order: -1;
+    margin-bottom: var(--spacing-m);
+  }
+
+  .download-form-box {
+    position: static;
+  }
+
+  .resource-title {
+    font-size: 1.5em;
+  }
+}

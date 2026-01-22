@@ -1,10 +1,10 @@
 <?php
 /**
- * 導入事例 アーカイブ
+ * イベント アーカイブ
  */
 get_header();
 ?>
-<body class="page case-archive-page">
+<body class="page event-archive-page">
 <?php get_header('gtm'); ?>
 
 <main class="main wrapper">
@@ -12,7 +12,7 @@ get_header();
     <?php get_header('menu'); ?>
   </div>
 
-  <?php get_template_part('template-parts/case/archive'); ?>
+  <?php get_template_part('template-parts/event/archive'); ?>
 
   <section class="bnr_dl_cta bnr_page">
     <?php get_template_part('sections/cta'); ?>

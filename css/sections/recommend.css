@@ -1,0 +1,77 @@
+/**
+ * Recommend Section - こんな場所におすすめ
+ * sections/recommend.php
+ */
+
+.bg_blue.sec05.rec-space {
+	padding: var(--spacing-l) 0;
+	background-color: var(--accent-light);
+}
+
+.bg_blue.sec05.rec-space h3 {
+	margin-bottom: var(--spacing-m);
+}
+
+.bg_blue.sec05.rec-space .card-wrap {
+	max-width: 1144px;
+	margin: 0 auto;
+}
+
+.bg_blue.sec05.rec-space .card-box {
+	padding: 0 10px;
+}
+
+.bg_blue.sec05.rec-space .card-box .uk-card {
+	background: var(--light-white);
+	border-radius: 10px;
+	padding: 30px 20px;
+	text-align: center;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease;
+}
+
+.bg_blue.sec05.rec-space .card-box .uk-card:hover {
+	transform: translateY(-3px);
+}
+
+.bg_blue.sec05.rec-space .card-box figure {
+	margin: 0 0 var(--spacing-s);
+}
+
+.bg_blue.sec05.rec-space .card-box figure img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.bg_blue.sec05.rec-space .card-box h4 {
+	font-size: 1em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin: 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	.bg_blue.sec05.rec-space {
+		padding: var(--spacing-l) 6%;
+	}
+
+	.bg_blue.sec05.rec-space .card-box {
+		padding: 5px;
+	}
+
+	.bg_blue.sec05.rec-space .card-box .uk-card {
+		padding: 15px 10px;
+	}
+
+	.bg_blue.sec05.rec-space .card-box figure {
+		margin: 0 0 var(--spacing-xs);
+	}
+
+	.bg_blue.sec05.rec-space .card-box h4 {
+		font-size: 0.875em;
+	}
+}

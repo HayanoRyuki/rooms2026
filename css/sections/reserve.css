@@ -1,0 +1,155 @@
+/**
+ * Reserve Section - 選べる予約・入室方法
+ * sections/reserve.php
+ */
+
+#top_reserve {
+	padding: var(--spacing-l) 0;
+	background-color: var(--light-white);
+}
+
+#top_reserve h3 {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin-bottom: var(--spacing-m);
+}
+
+.top_reserve01,
+.top_reserve02 {
+	max-width: 1144px;
+	margin: 0 auto var(--spacing-m);
+	padding: 0 5%;
+}
+
+.top_reserve01 ul,
+.top_reserve02 ul {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-s);
+	list-style: none;
+}
+
+.top_reserve01 ul li,
+.top_reserve02 ul li {
+	flex: 1;
+	max-width: 340px;
+	background: var(--light-white);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+	transition: transform 0.3s ease;
+}
+
+.top_reserve01 ul li:hover,
+.top_reserve02 ul li:hover {
+	transform: translateY(-3px);
+}
+
+.top_reserve_text {
+	padding: var(--spacing-s);
+}
+
+.top_reserve_text h4 {
+	font-size: 1.125em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin-bottom: 0.5em;
+}
+
+.top_reserve_text p {
+	font-size: 0.875em;
+	color: var(--light-gray-dark);
+	line-height: 1.6;
+}
+
+.top_reserve01 ul li img,
+.top_reserve02 ul li img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Section Labels */
+.top_reserve01::before {
+	content: "予約方法";
+	display: block;
+	text-align: center;
+	font-size: 0.875em;
+	font-weight: bold;
+	color: var(--accent-dark);
+	margin-bottom: var(--spacing-s);
+	padding: 0.5em 1em;
+	background: var(--accent-light);
+	border-radius: 20px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top_reserve02::before {
+	content: "入室方法";
+	display: block;
+	text-align: center;
+	font-size: 0.875em;
+	font-weight: bold;
+	color: var(--accent-dark);
+	margin-bottom: var(--spacing-s);
+	padding: 0.5em 1em;
+	background: var(--accent-light);
+	border-radius: 20px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	#top_reserve {
+		padding: var(--spacing-l) 6%;
+	}
+
+	#top_reserve h3 {
+		font-size: 1.5em;
+	}
+
+	.top_reserve01,
+	.top_reserve02 {
+		padding: 0;
+	}
+
+	.top_reserve01 ul,
+	.top_reserve02 ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.top_reserve01 ul li,
+	.top_reserve02 ul li {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.top_reserve01 ul li img,
+	.top_reserve02 ul li img {
+		width: 40%;
+		border-radius: 0 10px 10px 0;
+	}
+
+	.top_reserve_text {
+		flex: 1;
+		padding: var(--spacing-s);
+	}
+
+	.top_reserve_text h4 {
+		font-size: 1em;
+	}
+
+	.top_reserve_text p {
+		font-size: 0.75em;
+	}
+}

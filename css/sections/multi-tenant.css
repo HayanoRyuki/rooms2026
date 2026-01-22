@@ -1,0 +1,65 @@
+/**
+ * Multi-tenant Section - マルチテナント機能
+ * sections/multi-tenant.php
+ */
+
+.sec05:not(.rec-space) {
+	padding: var(--spacing-l) 0;
+	background-color: var(--light-white);
+}
+
+.sec05:not(.rec-space) h3 {
+	margin-bottom: var(--spacing-s);
+}
+
+.sec05:not(.rec-space) > .container > .b1 {
+	text-align: center;
+	margin-bottom: var(--spacing-m);
+}
+
+.sec05 .normal-index-wrap {
+	max-width: 1144px;
+	margin: 0 auto;
+}
+
+.sec05 .normal-index-box figure {
+	margin: 0;
+}
+
+.sec05 .normal-index-box figure img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.sec05 .normal-index-box .b1 {
+	font-size: 0.8em;
+	padding-top: 10px;
+	text-align: left;
+	color: var(--light-gray-dark);
+	line-height: 1.6;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	.sec05:not(.rec-space) {
+		padding: var(--spacing-l) 6%;
+	}
+
+	.sec05:not(.rec-space) h3 {
+		font-size: 1.5em;
+	}
+
+	.sec05:not(.rec-space) > .container > .b1 {
+		font-size: 0.875em;
+		text-align: left;
+	}
+
+	.sec05 .normal-index-box {
+		margin-bottom: var(--spacing-m);
+	}
+
+	.sec05 .normal-index-box .b1 {
+		font-size: 0.75em;
+	}
+}

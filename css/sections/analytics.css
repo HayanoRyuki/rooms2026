@@ -1,0 +1,112 @@
+/**
+ * Analytics Section - 自動分析で改善ポイントの特定
+ * sections/analytics.php
+ */
+
+#sec_analytucs {
+	padding: var(--spacing-l) 0;
+	background-color: var(--accent-light);
+}
+
+#sec_analytucs .container {
+	max-width: 1144px;
+	margin: 0 auto;
+}
+
+#sec_analytucs .sec_point_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--spacing-m);
+	flex-direction: row-reverse;
+}
+
+#sec_analytucs .sec_point_wrap > li:first-child {
+	flex: 1;
+}
+
+#sec_analytucs .sec_point_wrap > li.sec_point_img {
+	flex: 0 0 45%;
+	max-width: 512px;
+}
+
+#sec_analytucs .sec_point_wrap h3 {
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin-bottom: var(--spacing-m);
+	line-height: 1.4;
+}
+
+#sec_analytucs .sec_point_text {
+	list-style: none;
+}
+
+#sec_analytucs .sec_point_text li {
+	margin-bottom: var(--spacing-s);
+	padding-left: 1.5em;
+	position: relative;
+}
+
+#sec_analytucs .sec_point_text li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.5em;
+	width: 8px;
+	height: 8px;
+	background-color: var(--accent-default);
+	border-radius: 50%;
+}
+
+#sec_analytucs .sec_point_text h4 {
+	font-size: 1.25em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin-bottom: 0.5em;
+}
+
+#sec_analytucs .sec_point_text p {
+	font-size: 1em;
+	color: var(--light-gray-dark);
+	line-height: 1.8;
+}
+
+#sec_analytucs .sec_point_img img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	#sec_analytucs {
+		padding: var(--spacing-l) 6%;
+	}
+
+	#sec_analytucs .sec_point_wrap {
+		flex-direction: column;
+	}
+
+	#sec_analytucs .sec_point_wrap > li.sec_point_img {
+		flex: none;
+		width: 100%;
+		max-width: 100%;
+		order: -1;
+		margin-bottom: var(--spacing-m);
+	}
+
+	#sec_analytucs .sec_point_wrap h3 {
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	#sec_analytucs .sec_point_text h4 {
+		font-size: 1.125em;
+	}
+
+	#sec_analytucs .sec_point_text p {
+		font-size: 0.875em;
+	}
+}

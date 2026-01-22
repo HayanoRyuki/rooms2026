@@ -1,0 +1,94 @@
+/**
+ * BOXIL Section - 受賞バッジ
+ * sections/boxil.php
+ */
+
+.boxil {
+	padding: var(--spacing-l) 0;
+	background-color: var(--light-white);
+	text-align: center;
+}
+
+.boxil h2 {
+	font-size: 1.75em;
+	font-weight: bold;
+	line-height: 1.5;
+	color: var(--light-black);
+	margin-bottom: var(--spacing-m);
+}
+
+.boxil h2 span {
+	color: var(--accent-dark);
+	display: block;
+	font-size: 1.2em;
+}
+
+.boxil ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--spacing-s);
+	margin-bottom: var(--spacing-m);
+}
+
+.boxil ul li {
+	list-style: none;
+}
+
+.boxil ul li:first-child img {
+	width: 200px;
+	height: 200px;
+}
+
+.boxil ul li:not(:first-child) img {
+	width: 150px;
+	height: 150px;
+}
+
+.boxil p {
+	font-size: 0.75em;
+	color: var(--light-gray-dark);
+	line-height: 1.6;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 6%;
+}
+
+.boxil p + p {
+	margin-top: 0.5em;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	.boxil {
+		padding: var(--spacing-l) 6%;
+	}
+
+	.boxil h2 {
+		font-size: 1.375em;
+	}
+
+	.boxil h2 span {
+		font-size: 1.1em;
+	}
+
+	.boxil ul {
+		gap: var(--spacing-xs);
+	}
+
+	.boxil ul li:first-child img {
+		width: 140px;
+		height: 140px;
+	}
+
+	.boxil ul li:not(:first-child) img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.boxil p {
+		font-size: 0.625em;
+		text-align: left;
+	}
+}

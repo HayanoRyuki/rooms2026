@@ -1,0 +1,104 @@
+/**
+ * FAQ Section - よくある質問
+ * sections/faq.php
+ */
+
+.faq {
+	padding: var(--spacing-l) 0;
+	background-color: var(--light-white);
+}
+
+.faq h2 {
+	margin-bottom: var(--spacing-m);
+}
+
+.faq-index-wrap {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.faq-index-wrap li {
+	font-size: 1em;
+	padding: var(--spacing-m) 0;
+	border-bottom: var(--light-divider) 1px solid;
+}
+
+.faq-index-wrap li:first-child {
+	border-top: var(--light-divider) 1px solid;
+}
+
+.faq-index-wrap li a.uk-accordion-title {
+	display: block;
+	font-size: 1.25em;
+	color: var(--light-black);
+	font-weight: bold;
+	text-decoration: none;
+	position: relative;
+	padding-right: 2em;
+}
+
+.faq-index-wrap li a.uk-accordion-title h3 {
+	font-size: 1em;
+	margin: 0;
+	line-height: 1.6;
+}
+
+.faq-index-wrap li .uk-accordion-content {
+	padding-top: var(--spacing-s);
+}
+
+.faq-index-wrap li .uk-accordion-content p {
+	color: var(--light-gray-dark);
+	line-height: 1.8;
+}
+
+.faq-index-wrap li .uk-accordion-content .btn {
+	margin-top: var(--spacing-s);
+	display: inline-block;
+}
+
+.faq .uk-accordion > :nth-child(n+2) {
+	margin-top: 0;
+}
+
+/* Accordion Icon */
+.faq .uk-accordion-title::before {
+	content: "";
+	width: 1.4em;
+	height: 1.4em;
+	margin-left: 10px;
+	float: right;
+	background-image: url(https://icongr.am/fontawesome/chevron-down.svg?size=16&color=57c2e9);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	transition: transform 0.3s ease;
+}
+
+.faq .uk-open > .uk-accordion-title::before {
+	background-image: url(https://icongr.am/fontawesome/chevron-up.svg?size=16&color=57c2e9);
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+	.faq {
+		padding: var(--spacing-l) 6%;
+	}
+
+	.faq-hero {
+		background-color: var(--accent-light);
+	}
+
+	.faq-index-wrap li a.uk-accordion-title {
+		font-size: 1em;
+	}
+
+	.faq-index-wrap li a.uk-accordion-title h3 {
+		font-size: 1em;
+	}
+
+	.faq-index-wrap li .btn {
+		width: 100%;
+		max-width: 400px;
+	}
+}

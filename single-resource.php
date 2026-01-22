@@ -1,10 +1,10 @@
 <?php
 /**
- * 導入事例 アーカイブ
+ * お役立ち資料 シングル
  */
 get_header();
 ?>
-<body class="page case-archive-page">
+<body class="page resource-single-page">
 <?php get_header('gtm'); ?>
 
 <main class="main wrapper">
@@ -12,7 +12,13 @@ get_header();
     <?php get_header('menu'); ?>
   </div>
 
-  <?php get_template_part('template-parts/case/archive'); ?>
+  <?php
+  if (have_posts()) :
+    while (have_posts()) : the_post();
+      get_template_part('template-parts/resource/single');
+    endwhile;
+  endif;
+  ?>
 
   <section class="bnr_dl_cta bnr_page">
     <?php get_template_part('sections/cta'); ?>
