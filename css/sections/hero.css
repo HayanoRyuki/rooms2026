@@ -63,6 +63,21 @@
 	margin-bottom:22px;
 }
 
+/* Document Guidance */
+.document_guidance {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25em;
+	font-weight: bold;
+	color: var(--light-black);
+	margin-bottom: 20px;
+}
+
+.document_guidance img {
+	margin-right: 8px;
+}
+
 /* Form Styles */
 .kv-form-wrap {
 	border: solid 1px var(--light-divider);
@@ -222,6 +237,33 @@ input[type="button"]:focus {
 .kv-form input[type="submit"]:hover {
 	cursor: pointer;
 	opacity: 0.6;
+}
+
+/* Hero Form Submit Button */
+.top .hero .btn.btn_dl,
+#contact .btn.btn_dl {
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0 24px;
+	border-radius: 30px;
+	background-color: #ff6262;
+	line-height: 50px;
+	letter-spacing: 0.08px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	box-shadow: 0 5px 0 #e45959;
+	border: none;
+	cursor: pointer;
+	margin-top: 1.5rem;
+	transition: all 0.3s ease;
+}
+
+.top .hero .btn.btn_dl:hover,
+#contact .btn.btn_dl:hover {
+	background-color: #ff7a7a;
+	opacity: 1;
 }
 
 /* Large Screen */
