@@ -4,37 +4,58 @@
  */
 
 /* ======================
-   Movie Container
+   Section Container
+   ====================== */
+.movie-section {
+	padding: 80px 0;
+	background-color: #fff;
+}
+
+.movie-section .container {
+	max-width: 1144px;
+	width: 89.5%;
+	margin: 0 auto;
+}
+
+.movie-section h3 {
+	font-size: 2.375em;
+	font-weight: bold;
+	color: #112d48;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* ======================
+   Movie Grid
    ====================== */
 .movie-wrap {
-	margin-top: 40px;
-	max-width: 1144px;
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
 .movie-wrap .movie-box {
-	padding: 0 15px;
+	padding: 0 20px;
 }
 
 .movie-wrap .movie-box h4 {
 	margin-bottom: 20px;
 	text-align: center;
-	font-size: 1.125em;
+	font-size: 1.25em;
 	font-weight: bold;
 	color: #112d48;
 }
 
 /* ======================
-   Video Embed
+   Video Embed (16:9 Responsive)
    ====================== */
 .movie-wrap .movie {
 	position: relative;
 	width: 100%;
 	padding-top: 56.25%; /* 16:9 Aspect Ratio */
-	border-radius: 10px;
+	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	background-color: #000;
 }
 
 .movie-wrap .movie iframe {
@@ -50,21 +71,45 @@
    Mobile (767px以下)
    ====================== */
 @media screen and (max-width: 767px) {
-	.movie-wrap {
-		margin-top: 20px;
+	.movie-section {
+		padding: 60px 0;
+	}
+
+	.movie-section .container {
+		width: 100%;
+		padding: 0 6.4%;
+	}
+
+	.movie-section h3 {
+		font-size: 1.75em;
+		margin-bottom: 24px;
 	}
 
 	.movie-wrap .movie-box {
 		padding: 0;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
+	}
+
+	.movie-wrap .movie-box:last-child {
+		margin-bottom: 0;
 	}
 
 	.movie-wrap .movie-box h4 {
-		font-size: 1em;
+		font-size: 1.125em;
 		margin-bottom: 12px;
 	}
 
 	.movie-wrap .movie {
 		border-radius: 5px;
+	}
+}
+
+/* ======================
+   Desktop (1280px以上)
+   ====================== */
+@media only screen and (min-width: 1280px) {
+	.movie-section .container {
+		max-width: 1144px;
+		width: 100%;
 	}
 }
