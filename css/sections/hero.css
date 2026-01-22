@@ -3,74 +3,75 @@
  * sections/hero.php
  */
 
+/* ======================
+   Hero Container
+   ====================== */
 .top .hero.page-title.wrapper {
-	width:100%;
+	width: 100%;
 	background-color: #00abdc;
 }
 
 .top .hero.page-title.wrapper .hero-body {
 	display: flex;
 	justify-content: center;
-	width:100%;
-	padding:0 0 0 calc((100% - 89.5%) / 2);
-	margin:0 auto;
+	width: 100%;
+	padding: 0 0 0 calc((100% - 89.5%) / 2);
+	margin: 0 auto;
 }
 
+/* Left Column - Image */
 .top .hero.page-title.wrapper .hero-body .container_l {
-	width:64%;
-	padding:85px 1.6% 0 0;
+	width: 64%;
+	padding: 85px 1.6% 0 0;
 	background: url("../../img/meetignroom_kv.svg") no-repeat right 14px bottom;
 	background-size: 49% auto;
-	margin:0;
+	margin: 0;
 }
 
 .mv_txt-box * {
-	color: var(--light-white);
+	color: #fff;
 }
 
 .mv_txt-box h4 {
-	font-size:1.5em;
+	font-size: 1.5em;
 	font-weight: bold;
 	text-align: left;
 }
 
 .mv_txt-box h2 {
-	font-size:3.25em;
-	margin:var(--spacing-s) 0 0;
+	font-size: 3.25em;
+	margin: 16px 0 0;
 	font-weight: bold;
 	letter-spacing: 0.52px;
 	text-align: left;
 }
 
 .mv_img-box {
-	width:56.3%;
-	margin-top:calc(3*var(--spacing-s));
+	width: 56.3%;
+	margin-top: 48px;
 }
 
 .mv_img-box img {
-	width:100%;
+	width: 100%;
 }
 
+/* Right Column - Form */
 .top .hero.page-title.wrapper .hero-body .container_r {
-	width:36%;
-	background: var(--light-white);
-	padding:35px 3.1%;
+	width: 36%;
+	background: #fff;
+	padding: 35px 3.1%;
 }
 
-.top .hero.page-title.wrapper .hero-body .container_r h4 {
-	font-size:1.3125em;
-	font-weight:bold;
-	margin-bottom:22px;
-}
-
-/* Document Guidance */
+/* ======================
+   Document Guidance
+   ====================== */
 .document_guidance {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 1.25em;
 	font-weight: bold;
-	color: var(--light-black);
+	color: #333;
 	margin-bottom: 20px;
 }
 
@@ -78,284 +79,237 @@
 	margin-right: 8px;
 }
 
-/* Form Styles */
+/* ======================
+   Form Wrapper
+   ====================== */
 .kv-form-wrap {
-	border: solid 1px var(--light-divider);
-	border-radius: 0.5rem;
-	margin-bottom: 2rem;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	margin-bottom: 24px;
+	overflow: hidden;
 }
 
 .kv-form-wrap > div {
-	padding:0.75rem 1rem;
+	padding: 12px 16px;
+	border-bottom: 1px solid #e0e0e0;
 }
 
-.kv-form-wrap > div div.uk-flex > span:first-child {
-	width:50%;
-	padding-right:1rem;
-	border-right:1px solid var(--light-divider);
+.kv-form-wrap > div:last-child {
+	border-bottom: none;
 }
 
-.kv-form-wrap > div div.uk-flex > span:last-child {
-	width:50%;
-	padding-left:1rem;
+/* Name fields row */
+.kv-form-wrap > div .uk-flex {
+	display: flex;
 }
 
-.kv-form-wrap > div:not(:last-of-type) {
-	border-bottom: solid 1px var(--light-divider);
+.kv-form-wrap > div .uk-flex > span:first-child {
+	width: 50%;
+	padding-right: 16px;
+	border-right: 1px solid #e0e0e0;
 }
 
+.kv-form-wrap > div .uk-flex > span:last-child {
+	width: 50%;
+	padding-left: 16px;
+}
+
+/* Labels */
 .kv-form-wrap label {
 	display: block;
-	font-size: 1.2rem;
+	font-size: 12px;
 	font-weight: bold;
-	margin-bottom: 0.5rem;
-	color: var(--light-gray-dark);
+	margin-bottom: 6px;
+	color: #666;
 }
 
-.kv-form-wrap input {
-	display: block;
-}
-
+/* Text Inputs */
 .kv-form-wrap input[type="text"] {
-	width: 100%;
-	font-size: 1.6rem;
-	border: none;
-}
-
-.select {
-	border: none;
-	font-size: 1.6rem;
-	color: var(--light-gray-dark);
-}
-
-input::placeholder,
-textarea::placeholder {
-	color: var(--light-gray);
-}
-
-.kv-form-plicy {
-	border: solid 1px var(--light-divider);
-	border-radius: 0.5rem;
-	padding: 1.0rem;
-	margin-bottom: 2rem;
-	font-size: 1.1rem;
-	overflow: auto;
-	height: 48px;
-	color: var(--light-gray-dark);
-}
-
-.kv-form-agree {
-	color: var(--light-gray-dark);
-	font-size: 1.0rem;
-	margin-bottom: 1.5rem;
-	display: flex;
-	align-items: center;
-}
-
-/* Checkbox Styles */
-input[type="checkbox"] {
-	visibility: hidden;
-}
-
-input[type="checkbox"] + label {
-	position:relative;
-	padding: 5px 0 5px 30px;
-	cursor:pointer;
-}
-
-input[type="checkbox"] + label:before {
-	width:16px;
-	height:16px;
-	left:5px;
-	border:1px solid var(--light-divider);
-	border-radius:3px;
-	margin-top:-8px;
-}
-
-input[type="checkbox"] + label:after,
-input[type="checkbox"] + label:before {
-	position:absolute;
-	content:"";
-	top:50%
-}
-
-input[type=checkbox]:checked + label::before {
-	background: var(--accent-default);
-	border-color: var(--accent-default);
-}
-
-input[type="checkbox"] + label::after {
-	position: absolute;
-	content:url("https://icongr.am/fontawesome/check.svg?size=16&color=FFFFFF");
-	margin-top: -8px;
-	opacity: 0;
-	left:5px;
-	color:#FFF;
-}
-
-input[type=checkbox]:checked + label::after {
-	opacity: 1;
-}
-
-.kv-form input:focus {
-	outline: 0;
-}
-
-/* Submit Button */
-input[type="submit"],
-input[type="button"] {
-	border: none;
-	box-sizing: border-box;
-	cursor: pointer;
-	width:100%;
-	margin-top:2rem;
-	height:48px;
-	line-height:48px;
-}
-
-input[type="submit"]::-webkit-search-decoration,
-input[type="button"]::-webkit-search-decoration {
-	display: none;
-}
-
-input[type="submit"]:focus,
-input[type="button"]:focus {
-	outline-offset: -2px;
-}
-
-.kv-form input[type="submit"] {
-	background: #FF706E;
-	color: #fff;
-	border-radius: 0.3rem;
-	border: none;
-	width: 100%;
-	padding: 1.4rem;
-	font-weight: bold;
-	transition: all .3s;
-}
-
-.kv-form input[type="submit"]:hover {
-	cursor: pointer;
-	opacity: 0.6;
-}
-
-/* Hero Form Submit Button */
-.top .hero .btn.btn_dl,
-#contact .btn.btn_dl {
 	display: block;
 	width: 100%;
-	height: 50px;
-	padding: 0 24px;
+	font-size: 16px;
+	border: none;
+	padding: 4px 0;
+	background: transparent;
+	color: #333;
+}
+
+.kv-form-wrap input[type="text"]:focus {
+	outline: none;
+}
+
+.kv-form-wrap input[type="text"]::placeholder {
+	color: #999;
+}
+
+/* ======================
+   Checkbox Agreement
+   ====================== */
+.kv-form-agree {
+	color: #666;
+	font-size: 13px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-start;
+	line-height: 1.5;
+}
+
+.kv-form-agree input[type="checkbox"] {
+	width: 18px;
+	height: 18px;
+	margin-right: 8px;
+	margin-top: 2px;
+	flex-shrink: 0;
+	accent-color: #00abdc;
+	cursor: pointer;
+	visibility: visible;
+}
+
+.kv-form-agree label {
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.kv-form-agree a {
+	color: #00abdc;
+	text-decoration: underline;
+}
+
+/* ======================
+   Submit Button
+   ====================== */
+#contact .btn.btn_dl,
+.top .hero .btn.btn_dl,
+input.btn.btn_dl {
+	display: block;
+	width: 100%;
+	height: 56px;
+	padding: 0;
 	border-radius: 30px;
 	background-color: #ff6262;
-	line-height: 50px;
-	letter-spacing: 0.08px;
+	line-height: 56px;
 	text-align: center;
+	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
 	box-shadow: 0 5px 0 #e45959;
 	border: none;
 	cursor: pointer;
-	margin-top: 1.5rem;
 	transition: all 0.3s ease;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
+#contact .btn.btn_dl:hover,
 .top .hero .btn.btn_dl:hover,
-#contact .btn.btn_dl:hover {
+input.btn.btn_dl:hover {
 	background-color: #ff7a7a;
-	opacity: 1;
+	transform: translateY(2px);
+	box-shadow: 0 3px 0 #e45959;
 }
 
-/* Large Screen */
+/* ======================
+   Large Screen (1440px+)
+   ====================== */
 @media only screen and (min-width: 1440px) {
 	.top .hero.page-title.wrapper .hero-body {
 		display: flex;
-		justify-content:space-between;
+		justify-content: space-between;
 		width: 100%;
 		padding: 0 0 0 67px;
 		margin: 0 auto;
 	}
+
 	.top .hero.page-title.wrapper .hero-body .container_l {
-		width:64%;
-		padding:85px 1.6% 0 0;
+		width: 64%;
+		padding: 85px 1.6% 0 0;
 		background: url("../../img/meetignroom_kv.svg") no-repeat right 14px bottom;
 		background-size: 49% auto;
 	}
+
 	.top .hero.page-title.wrapper .hero-body .container_r {
-		background: var(--light-white);
+		background: #fff;
 	}
 }
 
-/* Mobile */
+/* ======================
+   Mobile (767px以下)
+   ====================== */
 @media screen and (max-width: 767px) {
 	.top .hero.page-title.wrapper .hero-body {
-		display:block;
+		display: block;
 		width: 100%;
-		padding: 0 0 var(--spacing-m);
+		padding: 0 0 32px;
 		margin: 0 auto;
 	}
+
 	.top .hero.page-title.wrapper .hero-body .container_l {
 		width: 100%;
-		padding:var(--spacing-s) 3% 0;
+		padding: 16px 3% 0;
 		background: url("../../img/meetignroom_kv.svg") no-repeat right 6% bottom;
 		background-size: 30% auto;
 	}
+
 	.mv_txt-box h4 {
-		margin: var(--spacing-s) auto;
+		margin: 16px auto;
 		font-size: 1.125em;
 		font-weight: bold;
 		line-height: 1.6;
 		letter-spacing: 0.09px;
 		text-align: center;
 	}
+
 	.mv_txt-box h2 {
-		margin: var(--spacing-s) auto 0;
+		margin: 16px auto 0;
 		font-size: 2em;
 		line-height: 1.3;
 		text-align: center;
 	}
+
 	.mv_img-box {
 		width: 60%;
-		margin: calc(3*var(--spacing-s)) 7.6% 0;
+		margin: 48px 7.6% 0;
 	}
+
 	.top .hero.page-title.wrapper .hero-body .container_r {
 		width: 94%;
-		margin:0 auto;
-		background: var(--light-white);
-		padding: var(--spacing-m) 3.5% 30px;
+		margin: 0 auto;
+		background: #fff;
+		padding: 32px 3.5% 30px;
 		border-radius: 10px;
 	}
-	.top .hero.page-title.wrapper .hero-body .container_r h4 {
+
+	.document_guidance {
 		font-size: 1.125em;
-		font-weight: bold;
-		margin-bottom:var(--spacing-m);
-		text-align: center;
+		margin-bottom: 24px;
 	}
-	.kv-form {
-		width: 100%;
-		padding: 4rem 2rem;
-	}
-	.kv-form h2 {
-		font-size: 2.4rem;
-		margin-bottom: 2rem;
-	}
+
 	.kv-form-wrap {
-		border: solid 1px #d2e9e7;
-		border-radius: 0.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 20px;
 	}
-	.kv-form input[type="submit"] {
-		padding: 2rem 0;
-		font-size: 2.4rem;
+
+	.kv-form-wrap > div {
+		padding: 10px 12px;
 	}
-	input[type="checkbox"] + label {
-		padding: 5px 0 5px 24px;
+
+	.kv-form-wrap label {
+		font-size: 11px;
 	}
-	input[type="checkbox"] + label:before {
-		left: 0;
+
+	.kv-form-wrap input[type="text"] {
+		font-size: 14px;
 	}
-	input[type="checkbox"] + label::after {
-		opacity: 0;
-		left: 1px;
+
+	.kv-form-agree {
+		font-size: 12px;
+	}
+
+	#contact .btn.btn_dl,
+	.top .hero .btn.btn_dl,
+	input.btn.btn_dl {
+		height: 50px;
+		line-height: 50px;
+		font-size: 15px;
 	}
 }
