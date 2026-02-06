@@ -217,7 +217,7 @@ function rooms2026_enqueue_vendor_css() {
 		}
 	}
 }
-add_action('wp_enqueue_scripts', 'rooms2026_enqueue_vendor_css');
+add_action('wp_enqueue_scripts', 'rooms2026_enqueue_vendor_css', 5);
 
 
 // ===================================
