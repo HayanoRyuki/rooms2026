@@ -1,36 +1,9 @@
 <?php
 /**
  * カスタム投稿タイプ：導入事例（case）
+ *
+ * 導入事例固有の機能：メタボックス、外部確認URL、管理画面カラムなど
  */
-
-function register_custom_post_type_case() {
-	register_post_type(
-		'case',
-		array(
-			'labels' => array(
-				'name'               => '導入事例',
-				'singular_name'      => '導入事例',
-				'add_new'            => '新規追加',
-				'add_new_item'       => '新しい導入事例を追加',
-				'edit_item'          => '導入事例を編集',
-				'new_item'           => '新しい導入事例',
-				'view_item'          => '導入事例を表示',
-				'search_items'       => '導入事例を検索',
-				'not_found'          => '導入事例が見つかりませんでした',
-				'not_found_in_trash' => 'ゴミ箱に導入事例は見つかりませんでした',
-				'menu_name'          => '導入事例',
-			),
-			'public'        => true,
-			'has_archive'   => true,
-			'rewrite'       => array( 'slug' => 'case' ),
-			'menu_position' => 5,
-			'menu_icon'     => 'dashicons-portfolio',
-			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-			'show_in_rest'  => true,
-		)
-	);
-}
-add_action( 'init', 'register_custom_post_type_case' );
 
 /* =========================================================
  * case：外部確認URL（14日間有効）

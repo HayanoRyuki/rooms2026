@@ -1,0 +1,1 @@
+// Footer utility scripts
