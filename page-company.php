@@ -200,7 +200,7 @@ _:-ms-lang(x)::-ms-backdrop,
 			<div class="kv">
 				<picture>
 
-                      <img src="<?php echo get_template_directory_uri(); ?>/img/about_kv@3x.jpg" alt="" data-pagespeed-url-hash="2200589300" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/about_kv@3x.jpg" alt="" data-pagespeed-url-hash="2200589300" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 				</picture>
 			</div>
 
@@ -214,7 +214,7 @@ _:-ms-lang(x)::-ms-backdrop,
 				<div class="img-box">
 					<figure>
 						<picture>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ceo@3x.jpg" alt="" data-pagespeed-url-hash="4039458342" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ceo@3x.jpg" alt="" data-pagespeed-url-hash="4039458342" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 						</picture>
 					</figure>
 				</div>
@@ -230,14 +230,14 @@ _:-ms-lang(x)::-ms-backdrop,
 「ビジネスの側にはRECEPTIONIST」<br><br>
 これからもRECEPTIONISTが皆様のビジネスコミュニケーションを後押しし、ビジネスパーソンがより輝ける未来をRECEPTIONISTが作っていきます。</p>
 				  </div>
-				  <p class="signature mt-s"><img src="<?php echo get_template_directory_uri(); ?>/img/img_signature_ceo.svg" class="ceo" alt="" data-pagespeed-url-hash="4140507953" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><strong>代表取締役CEO</strong></p>
+				  <p class="signature mt-s"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_signature_ceo.svg" class="ceo" alt="" data-pagespeed-url-hash="4140507953" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><strong>代表取締役CEO</strong></p>
 				</div>	
 			</div>
 			<div class="cont-wrap uk-flex">
 				<div class="img-box">
 					<figure>
 						<picture>
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/coo@3x.jpg" alt="" data-pagespeed-url-hash="3950114416" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/coo@3x.jpg" alt="" data-pagespeed-url-hash="3950114416" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 						</picture>
 					</figure>
 				</div>
@@ -249,7 +249,7 @@ _:-ms-lang(x)::-ms-backdrop,
 その後、当時流行っていたSNSによる新しいコミュニケーションに可能性を感じ、2006年、㈱ミクシィにWEBプロデューサーとして入社。mixi Platformやミクシィ年賀状など技術知識を必要とするプロジェクトを担当。<br><br>
 2013年、新たなサービスの立ち上げに参画するため MARK STYLER㈱ へ入社しプロダクトマネージャーを経験後、2016年に株式会社RECEPTIONISTに入社、取締役COO兼プロダクトマネージャーに就任。（現任）</p>
 				  </div>
-				  <p class="signature mt-s"><img src="<?php echo get_template_directory_uri(); ?>/img/img_signature_coo.svg" class="coo" alt="" data-pagespeed-url-hash="3388347823" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><strong>取締役COO プロダクトマネージャー</strong></p>
+				  <p class="signature mt-s"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_signature_coo.svg" class="coo" alt="" data-pagespeed-url-hash="3388347823" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><strong>取締役COO プロダクトマネージャー</strong></p>
 				</div>	
 			</div>
 		</div>
@@ -293,7 +293,7 @@ Outline</h1>
 	<?php get_footer(); ?>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/common.js"></script>
 
 </body>
 </html>

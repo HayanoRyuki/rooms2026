@@ -51,12 +51,12 @@
 				  <h4>ご予約カレンダー</h4>
 					<a href="" class="txt-link" target="_blank">別ウィンドウで開く<i class="fas fa-external-link-alt"></i></a>
 				  </div>
-				  <figure><img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/img_cal.png" alt=""/></figure>
+				  <figure><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_cal.png" alt=""/></figure>
 				</div>
 				<div class="txt-box">
 					<h4>私が担当します！</h4>
 					<div class="prof-box">
-						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/<?php echo get_template_directory_uri(); ?>/img/img_prof.png" alt=""/></div>
+						<div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_prof.png" alt=""/></div>
 						<dl><dt>白上</dt><dd>アカウントプランナーチームマネージャー</dd></dl>
 					</div>
 					<p class="b1 b2-sp">資料請求をいただいた方だけに、オンライン相談会をご案内しております。資料だけでは不明な点、管理画面の操作方法、導入事例や部署ごとの活用方法など、様々な疑問に30分程度でお答えします。
@@ -73,8 +73,8 @@
 <footer class="footer">
 <?php get_footer(); ?>
 </footer>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slick.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/slick.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/common.js"></script>
 <script>
 $(function(){
  $('.system01-slider').slick({

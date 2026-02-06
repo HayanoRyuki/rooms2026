@@ -9,7 +9,7 @@
       </div>
       <div class="img-box">
           <picture>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/img_0.1-3-3.png" alt="資料ダウンロードはこちら"/>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_0.1-3-3.png" alt="資料ダウンロードはこちら"/>
           </picture>
         </div>
       </div>

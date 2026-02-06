@@ -20,7 +20,7 @@
 					</ul>
 				</li>
 				<li class="sec_point_img">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/3-2-12x.webp" alt="空予約が多い主催者" width="512" height="382.047" >
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/3-2-12x.webp" alt="空予約が多い主催者" width="512" height="382.047" >
 				</li>
 		</ul>
 		</div>

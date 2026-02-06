@@ -16,7 +16,7 @@
 			<div class="hero page-title wrapper">
 	<div class="hero-body">
 		<div class="hero-tit">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/404_sp.svg" style="display: block; width: 100%; max-width: 800px; padding: 0 30px 30px 30px; box-sizing: border-box;">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/404_sp.svg" style="display: block; width: 100%; max-width: 800px; padding: 0 30px 30px 30px; box-sizing: border-box;">
       <a href="/" style="text-decoration: underline; color:#39f;">TOPページに戻る</a>
 		</div>
 	</div>
@@ -47,8 +47,8 @@
 <footer class="footer">
 <?php get_footer(); ?>
 </footer>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/slick.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/slick.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/common.js"></script>
 <script>
 $(function(){
  $('.system01-slider').slick({

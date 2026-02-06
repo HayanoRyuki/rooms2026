@@ -42,7 +42,7 @@
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium_large', array('class' => 'card-image')); ?>
                   <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.webp" alt="" class="card-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.webp" alt="" class="card-image">
                   <?php endif; ?>
                   <?php if (get_field('logo')) : ?>
                     <div class="corp-logo">

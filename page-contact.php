@@ -69,7 +69,7 @@
 <footer class="footer">
 	<?php get_footer(); ?>
 </footer>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/common.js"></script>
 <script>
   $('#send').click(function(event) {
     event.preventDefault();

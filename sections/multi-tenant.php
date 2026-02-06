@@ -8,7 +8,7 @@
 					</div>
 					<figure>
 						<picture>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/img_3.0-5-1.webp" alt="オフィスが１つのグループ会社のオフィスに集まる" />
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_3.0-5-1.webp" alt="オフィスが１つのグループ会社のオフィスに集まる" />
 						</picture>
 					</figure>
 					<p class="b1" style="font-size: 0.8em; padding-top: 10px; text-align: left">A社のオフィス内にB,C,D社が移転する場合。</p>
@@ -18,7 +18,7 @@
 					</div>
 					<figure>
 						<picture>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/img_3.0-5-2.webp" alt="テナントの問題で会議室の予約ができない" />
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_3.0-5-2.webp" alt="テナントの問題で会議室の予約ができない" />
 						</picture>
 					</figure>
 					<p class="b1" style="font-size: 0.8em; padding-top: 10px; text-align: left">A社とB,C,D社がそれぞれ別のグループウェア(テナント)のため、会議室の予約ができない。</p>
@@ -28,7 +28,7 @@
 					</div>
 					<figure>
 						<picture>
-						<img src="<?php echo get_template_directory_uri(); ?>/img/img_3.0-5-3.webp" alt="会議室予約のマルチテナント問題を解決" />
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_3.0-5-3.webp" alt="会議室予約のマルチテナント問題を解決" />
 						</picture>
 					</figure>
 					<p class="b1" style="font-size: 0.8em; padding-top: 10px; text-align: left">予約ルームズのマルチテナント機能で解決。</p>

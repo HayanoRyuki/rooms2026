@@ -20,7 +20,7 @@
 					</ul>
 				</li>
 				<li class="sec_point_img">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/3-1-12x.webp" alt="会議室予約の自動キャンセル" width="512" height="381.391">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/3-1-12x.webp" alt="会議室予約の自動キャンセル" width="512" height="381.391">
 				</li>
 		</ul>
 		</div>

@@ -8,7 +8,7 @@
 		<div class="h_top-block">
 			<div class="h_left">
 				<a href="<?php echo home_url('/'); ?>" class="logo-mark">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/img_logo_rooms.svg" alt="予約ルームズ" width="158" height="42">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_logo_rooms.svg" alt="予約ルームズ" width="158" height="42">
 				</a>
 				<nav class="h_l_nav pc">
 					<ul>

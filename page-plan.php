@@ -29,7 +29,7 @@
 </footer>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/common.js"></script>
 <script>
 tippy('.cap', {//指定した要素にツールチップが出現
 	placement: 'bottom-start',//ツールチップの表示位置⇒top、top-start、top-end、right、right-start、right-end、bottom、bottom-start、bottom-end、left、left-start、left-end。指定をしなくてもtopに表示

@@ -2,8 +2,8 @@
 		<nav class="foot-nav container">
 			<div class="uk-flex" uk-grid>
 				<div class="uk-width-1-6@m">
-					<div class="f-logo"><a href="https://all.receptionist.jp/"><img src="<?php echo get_template_directory_uri(); ?>/img/f_r_logo.svg" alt="株式会社RECEPTIONIST"/></a>
-					<p class="pmark"><img src="<?php echo get_template_directory_uri(); ?>/img/isms.png" alt="isms"></p>
+					<div class="f-logo"><a href="https://all.receptionist.jp/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/f_r_logo.svg" alt="株式会社RECEPTIONIST"/></a>
+					<p class="pmark"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/isms.png" alt="isms"></p>
 					</div>
 				</div>
 				<div class="uk-width-5-6@m uk-flex" uk-grid>

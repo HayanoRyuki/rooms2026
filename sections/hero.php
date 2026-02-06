@@ -8,17 +8,17 @@
   <div class="hero-body">
     <div class="container_l adView">
       <div class="mv_txt-box">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/img_reception_factory_H12x.webp" alt="会議室予約システム「予約ルームズ」"/>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_reception_factory_H12x.webp" alt="会議室予約システム「予約ルームズ」"/>
   </div>
       <div class="mv_img-box">
         <picture>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img-fv-left2x.webp" alt="会議室予約システムの画面">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img-fv-left2x.webp" alt="会議室予約システムの画面">
         </picture>
       </div>
       <!--<p class="cap">※1&nbsp;2022年度RECEPTIONIST利用回数&nbsp;※2レビューサイトITreviewにて</p>-->
     </div>
     <div class="container_r">
-      <p class="document_guidance"><img width="27px" height="auto" src="<?php echo get_template_directory_uri(); ?>/img/doc-doownload.svg">資料請求はこちら</p>
+      <p class="document_guidance"><img width="27px" height="auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/doc-doownload.svg">資料請求はこちら</p>
 <form id="contact" method="post" name="document">
 
           <div class="kv-form-wrap">

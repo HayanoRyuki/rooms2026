@@ -7,9 +7,9 @@
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/rooms_sbs_kv.webp" alt="SBSホールディングス">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/rooms_sbs_kv.webp" alt="SBSホールディングス">
                   </picture>
-          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/img/case-sbs-logo.webp" alt="SBSホールディングス"/></div>
+          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/case-sbs-logo.webp" alt="SBSホールディングス"/></div>
 
                 </div>
                 <div class="uk-card-body">
@@ -30,9 +30,9 @@
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/mitsui-designtec-icatch.webp" alt="三井デザインテック株式会社">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mitsui-designtec-icatch.webp" alt="三井デザインテック株式会社">
                   </picture>
-          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/img/mitsui-designtec-logo2.webp" alt="三井デザインテック株式会社"/></div>
+          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mitsui-designtec-logo2.webp" alt="三井デザインテック株式会社"/></div>
                 </div>
                 <div class="uk-card-body">
                   <h4>会議室管理と受付システムの導入で、誰もが自由に働けるオフィスを実現</h4>
@@ -53,9 +53,9 @@
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/final-inc-eyecatch-900-b.webp" alt="株式会社final">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/final-inc-eyecatch-900-b.webp" alt="株式会社final">
                   </picture>
-          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/img/final-inc-logo.webp" alt="株式会社final"/></div>
+          <div class="corp_icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/final-inc-logo.webp" alt="株式会社final"/></div>
 
                 </div>
                 <div class="uk-card-body">
