@@ -1,3 +1,8 @@
+<?php
+// セクション専用CSSを読み込み
+echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/assets/css/sections/series.css">';
+?>
+
 <section class="series-section">
   <div class="series-container">
     <h2 class="section-title">RECEPTIONISTシリーズについて</h2>
