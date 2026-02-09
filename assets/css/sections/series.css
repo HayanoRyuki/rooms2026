@@ -53,6 +53,11 @@
   transition: box-shadow 0.3s ease;
 }
 
+.series-card:visited,
+.series-card:link {
+  color: var(--color-text, #333);
+}
+
 .series-card:hover {
   box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
