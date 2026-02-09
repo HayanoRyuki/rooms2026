@@ -1,0 +1,514 @@
+@charset "UTF-8";
+
+/* =========================================================
+   1. 固定ページ：基本スタイル
+========================================================= */
+
+.page .site-main {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.page-content.inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content {
+  margin-bottom: 80px;
+}
+
+/* 見出し */
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.page-content h1 { font-size: 2rem; }
+.page-content h2 { font-size: 1.5rem; }
+.page-content h3 { font-size: 1.25rem; }
+
+/* 段落・リスト・画像・リンク */
+.page-content p {
+  margin-bottom: 1.5em;
+}
+
+.page-content ul,
+.page-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 2em 0;
+  display: block;
+}
+
+.page-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.page-content a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* =========================================================
+   2. CONTACT（旧構造：廃止予定）
+========================================================= */
+
+.contact-section {
+  background-color: var(--color-bg-alt);
+  padding: 8rem 2rem;
+}
+
+.contact-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.contact-intro {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.contact-button {
+  padding: 1rem 3rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contact-button:hover {
+  opacity: 0.8;
+}
+
+/* =========================================================
+   3. PAGE - CONTACT 共通構造
+========================================================= */
+
+.page-contact {
+  background-color: var(--color-bg-alt);
+  padding: 6rem 2rem;
+}
+
+.page-contact__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.page-contact__col {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.page-contact__form {
+  background-color: var(--color-white);
+  padding: 2.4rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.page-contact__form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.page-contact__form input,
+.page-contact__form select,
+.page-contact__form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.page-contact__button {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.page-contact__button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* =========================================================
+   4. PAGE - FORM 共通
+========================================================= */
+
+.page-form__control {
+  width: 100%;
+  background: #f7f8fa;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.page-form__control:focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.page-form__button {
+  display: block;
+  width: 100%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.1s;
+}
+
+.page-form__button:hover {
+  opacity: 0.9;
+}
+
+/* =========================================================
+   5. PAGE - THANKS 共通構造
+========================================================= */
+
+.page-thanks {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  font-family: var(--font-base);
+}
+
+.page-thanks__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.page-thanks__button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.page-thanks__button:hover {
+  opacity: 0.85;
+}
+
+/* =========================================================
+   6. PAGE - LP 共通レイアウト
+========================================================= */
+
+.page-lp__cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+
+.page-lp__cta-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.page-content.inner {
+  max-width: 1200px; /* front-page の cta-container と同一幅 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================================
+   自由記入フォーム共通スタイル（全固定ページ共通・root対応）
+========================================================= */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-white);
+}
+
+/* ラベル */
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+/* 入力欄・セレクト・テキストエリア */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0,181,226,0.15);
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* 必須マーク — ラベル全体ではなくマークのみに適用 */
+.contact-form label.required {
+  color: var(--color-text); /* ラベル文字は黒 */
+}
+
+/* 必須マーク部分だけ赤くする（:after 疑似要素で制御） */
+.contact-form label.required::after {
+  content: " *";
+  color: var(--color-danger);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* フィールド間隔 */
+.contact-form .form-group,
+.contact-form > div {
+  margin-bottom: 1.5rem;
+}
+
+/* 送信ボタン */
+.contact-form .btn-submit,
+.contact-form button[type="submit"],
+.contact-form input[type="submit"] {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.contact-form .btn-submit:hover,
+.contact-form button[type="submit"]:hover,
+.contact-form input[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.contact-form .btn-submit:active,
+.contact-form button[type="submit"]:active,
+.contact-form input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* エラーメッセージ（必要に応じて使用） */
+.contact-form .error-message {
+  color: var(--color-danger);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+/* 背景と間隔の調整（フォーム全体） */
+.contact-form-wrapper {
+  background-color: var(--color-bg);
+  padding: 3rem 1rem;
+}
+
+
+/* =========================================================
+   お問い合わせフォームのタイトル・イントロ配置調整
+========================================================= */
+.contact-proposal__title,
+.contact-partner__title,
+.contact-new__title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-proposal__intro,
+.contact-partner__intro,
+.contact-new__intro {
+  text-align: center;       /* 全体を中央配置 */
+  max-width: 700px;         /* 横幅を絞ると読みやすい */
+  margin: 0 auto 2.5rem;    /* 上下中央余白 */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+
+/* =========================================================
+   honeypotフィールド（スパム対策）を非表示化
+========================================================= */
+input[name="hp"],
+.contact-proposal__honeypot,
+.contact-new__honeypot,
+.contact-partner__honeypot {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* =========================================================
+   姓名フィールドを2カラム横並びに
+========================================================= */
+.contact-proposal__row,
+.contact-new__row,
+.contact-partner__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* カラム間のすき間 */
+}
+
+.contact-proposal__row .contact-proposal__group,
+.contact-new__row .contact-new__group,
+.contact-partner__row .contact-partner__group {
+  flex: 1 1 calc(50% - 0.5rem); /* 半分ずつ配置 */
+  min-width: 200px;
+}
+
+/* =========================================================
+   無料トライアルフォーム専用：入力欄共通化
+========================================================= */
+.contact-new__input[type="password"],
+.contact-new__input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  color: var(--color-text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-new__input[type="password"]:focus,
+.contact-new__input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 181, 226, 0.2);
+}
+
+
+/* =========================================================
+   フォーム内リンク（個人情報保護方針・利用規約など）の見た目統一
+========================================================= */
+.contact-proposal__privacy a,
+.contact-new__privacy a,
+.contact-partner__privacy a,
+.contact-user a[href*="privacy"],
+.contact-user a[href*="policy"] {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.contact-proposal__privacy a:hover,
+.contact-new__privacy a:hover,
+.contact-partner__privacy a:hover,
+.contact-user a[href*="privacy"]:hover,
+.contact-user a[href*="policy"]:hover {
+  color: var(--color-primary-hover);
+  text-decoration: none;
+}
+
+/* ==============================
+   フォーム スマホ内側余白調整（共通）
+============================== */
+@media screen and (max-width: 768px) {
+  .contact-new__inner,
+  .contact-partner__inner,
+  .contact-proposal__inner,
+  .contact-form-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* form自体にも最低限の余白を確保 */
+  .contact-form,
+  .contact-new__form,
+  .contact-partner__form,
+  .contact-proposal__form {
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+  }
+}

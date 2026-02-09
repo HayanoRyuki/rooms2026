@@ -20,12 +20,68 @@ $(document).ready(function() {
 //    }
 //  });
 	
-// スマホドロップダウンメニュー  
-  $(".navbar-burger").click(function() {
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-	  $("html").toggleClass("is-fixed");
+// =========================================================
+  //  共通仕様: ドロップダウン方式モバイルメニュー
+  //  - body overflow ロックなし（スクロール可能）
+  //  - オーバーレイなし
+  //  - ESCキー / リサイズ / リンククリック でクローズ
+  // =========================================================
+  var hamburger = document.querySelector('.l-header__hamburger');
+  var nav = document.querySelector('.l-header__nav');
+
+  function openMenu() {
+    if (!hamburger || !nav) return;
+    hamburger.classList.add('is-active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'メニューを閉じる');
+    nav.classList.add('is-open');
+  }
+
+  function closeMenu() {
+    if (!hamburger || !nav) return;
+    hamburger.classList.remove('is-active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'メニューを開く');
+    nav.classList.remove('is-open');
+  }
+
+  function toggleMenu() {
+    if (!hamburger || !nav) return;
+    if (nav.classList.contains('is-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  // ハンバーガークリック → toggleMenu
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+  }
+
+  // ナビリンククリック → 960px以下のときのみ closeMenu
+  if (nav) {
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 960) {
+          closeMenu();
+        }
+      });
+    });
+  }
+
+  // ESCキー → メニューが開いているとき closeMenu
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && nav && nav.classList.contains('is-open')) {
+      closeMenu();
+    }
+  });
+
+  // ウィンドウリサイズ → 961px以上になったら自動 closeMenu
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 960 && nav && nav.classList.contains('is-open')) {
+      closeMenu();
+    }
   });
 
 

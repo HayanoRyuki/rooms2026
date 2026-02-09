@@ -451,132 +451,11 @@ img {
 		background: #FFF;
 		padding:0 6%;
 	}
-	.navbar-burger {
-		cursor: pointer;
-		display: flex;
-		flex-flow: column;
-		justify-content: space-around;
-		height: 26px;
-		width: 27px;
-		margin: 0;
-		z-index: 10;
-		position:absolute;
-		right:6%;
-		top:calc(50% - 13px);
-	}
-	.navbar-burger span {
-		background-color: #000;
-		display: block;
-		height: 2px;
-		transform-origin: center;
-		transition-duration: 86ms;
-		transition-property: background-color, opacity, transform;
-		transition-timing-function: ease-out;
-		width: 100%;
-		border-radius: 3px;
-		position:relative;
-		top:auto !important;
-		left:0;
-	}
-
-	.navbar-burger.is-active span:nth-child(1) {
-		transform: rotate(45deg);
-		transform-origin: left top;
-		left:calc(25% - 0.5px);
-	}
-	.navbar-burger.is-active span:nth-child(3) {
-		transform: rotate(-45deg);
-		transform-origin: left bottom;
-		left:calc(25% - 0.5px);
-	}
-	.navbar-burger.is-active span:nth-child(2) {
-		opacity:0;
-	}
-	.navbar-menu {
-	visibility: hidden;
-    opacity: 0;
-    width: 100%;
-    position: fixed;
-    overflow: auto;
-    height: 100%;
-    left: 0;
-    top: 95px;
-    transition: .5s;
-    z-index: 100;
-    padding: 20px 24px 36px;
-    background-color: var(--light-white);
-	}
-	.navbar-menu.is-active {
-		opacity:1;
-		visibility: visible;
-	}
-	.navbar-menu .inner {
-    padding-bottom: 100px;
-}
-	.h_nav_sp .btn {
-		width:100%;
-		margin:0 auto;
-		max-width:328px;
-		height:40px;
-		line-height: 40px;
-		display: block;
-	}
-	.h_nav_sp dl {
-		margin-top:var(--spacing-s);
-	}
-
-	.h_nav_sp dl dd {
-		padding:var(--spacing-m) 0;
-		border-bottom: solid 1px var(--light-gray-lightest);
-		font-weight: bold;
-		line-height: 2;
-		letter-spacing: 0.08px;
-		text-align: left;
-	}
-	.h_nav_sp dl dd a{
-		color: var(--light-gray-dark);
-	}
-	.h_nav_sp dl dd h6 {
-		font-weight:normal;
-		font-size:0.75em;
-	}
-	.h_nav_sp dl dd .nav_product li .icon {
-		width:40px;
-		height: 40px;
-		margin: 0 var(--spacing-m) 0 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 10px;
-		background-color:var(--light-gray-lightest);
-	}
-	.h_nav_sp dl dd .nav_product li .icon img {
-		width:80%;
-	}
-	.h_nav_sp dl dd .nav_product li a {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		padding:10px 0;
-		font-size:1em;
-		font-weight: bold;
-		line-height: 2;
-		letter-spacing: 0.48px;
-		text-align: left;
-		color: var(--light-black);
-	}
-	.h_nav_sp dl dd .nav_product li small {
-		display: block;
-		font-size: 0.75em;
-		font-weight: bold;
-		line-height: 1.33;
-		letter-spacing: 0.36px;
-		text-align: left;
-		color: var(--light-gray-dark);
-	}
-	.h_nav_sp dl dd .nav_product li p {
-		padding-bottom:1rem;
-	}
+	/* =============================================
+	   旧モバイルメニュー（navbar-burger / navbar-menu）
+	   → 共通仕様のドロップダウン方式に移行済み
+	   → header.css の l-header__* クラスで制御
+	   ============================================= */
 }
 @media only screen and (max-width: 576px) {
 
@@ -585,13 +464,7 @@ img {
 /************************
  main gnav
 *************************/
-@media all and (max-width: 767px) {
-html.is-fixed,
-html.is-fixed body {
-    height: 100%;
-    overflow: hidden;
-  }
-}
+/* 旧スクロールロック（is-fixed）は共通仕様で廃止 */
 .btm_nav.sticky-wrapper {
 	width:100%;
 	background: #FFF;

@@ -1,11 +1,21 @@
 /**
- * ヘッダー用CSS - 本番準拠
+ * ヘッダー用CSS
+ * 共通仕様準拠: ドロップダウン方式モバイルメニュー
+ * ブレイクポイント: 960px（モバイル / PC切り替え）
  */
+
+/* ======================
+   オーバーレイ（無効化）
+   ドロップダウン方式ではオーバーレイ不要
+   ====================== */
+.l-header__overlay {
+	display: none !important;
+}
 
 /* ======================
    Header Container
    ====================== */
-.header {
+.l-header {
 	height: 80px;
 	line-height: 80px;
 	background-color: #fff;
@@ -14,43 +24,60 @@
 	z-index: 100;
 }
 
-.header .container {
+.l-header__inner {
 	max-width: 1144px;
 	width: 89.5%;
 	margin: 0 auto;
-}
-
-.header .h_top-block {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	position: relative;
 }
 
 /* ======================
    Logo
    ====================== */
-.logo-mark {
+.l-header__logo {
 	display: flex;
 	align-items: center;
 	margin-right: 40px;
+	flex-shrink: 0;
 }
 
-.logo-mark img {
+.l-header__logo-img {
 	width: 158px;
 	height: 42px;
 }
 
 /* ======================
-   Left Navigation
+   Hamburger Button（デフォルト非表示）
    ====================== */
-.h_left {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+.l-header__hamburger {
+	display: none;
 }
 
-.h_l_nav ul {
+.l-header__hamburger-line {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+	transform-origin: center;
+}
+
+/* ======================
+   Navigation（PC: 横並びナビ）
+   ====================== */
+.l-header__nav {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.l-header__nav-list {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -59,16 +86,16 @@
 	padding: 0;
 }
 
-.h_l_nav ul li {
+.l-header__nav-list li {
 	margin-right: 32px;
 	white-space: nowrap;
 }
 
-.h_l_nav ul li:last-child {
+.l-header__nav-list li:last-child {
 	margin-right: 0;
 }
 
-.h_l_nav ul li a {
+.l-header__nav-list a {
 	font-size: 0.875em;
 	font-weight: bold;
 	color: #66657c;
@@ -76,32 +103,27 @@
 	transition: color 0.3s ease;
 }
 
-.h_l_nav ul li a:hover,
-.h_l_nav ul li a.current {
+.l-header__nav-list a:hover,
+.l-header__nav-list a.current {
 	color: #00aed4;
 }
 
 /* ======================
-   Right Navigation (CTA Buttons)
+   CTA Buttons
    ====================== */
-.h_r_nav ul {
+.l-header__nav-cta {
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+	gap: 12px;
+	flex-shrink: 0;
 }
 
-.h_r_nav ul li {
-	margin-left: 12px;
-}
-
-/* 料金表をもらうボタン */
-.h_r_nav .btn-price {
-	display: inline-block;
+/* 料金表をもらうボタン（フレーム） */
+.c-button__header--frame {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	height: 44px;
-	line-height: 44px;
 	padding: 0 24px;
 	background-color: #fff;
 	border: 2px solid #ff6262;
@@ -112,19 +134,21 @@
 	text-decoration: none;
 	text-align: center;
 	transition: all 0.3s ease;
-	box-shadow: none;
+	white-space: nowrap;
+	line-height: 1;
 }
 
-.h_r_nav .btn-price:hover {
+.c-button__header--frame:hover {
 	background-color: #ff6262;
 	color: #fff;
 }
 
-/* 資料をもらうボタン */
-.h_r_nav .btn-dl {
-	display: inline-block;
+/* 資料をもらうボタン（塗り） */
+.c-button__header {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	height: 44px;
-	line-height: 44px;
 	padding: 0 24px;
 	background-color: #ff6262;
 	border: 2px solid #ff6262;
@@ -135,183 +159,177 @@
 	text-decoration: none;
 	text-align: center;
 	transition: all 0.3s ease;
-	box-shadow: none;
+	white-space: nowrap;
+	line-height: 1;
 }
 
-.h_r_nav .btn-dl:hover {
+.c-button__header:hover {
 	background-color: #e45959;
 	border-color: #e45959;
 	color: #fff;
 }
 
-/* ======================
-   Hamburger Menu (SP)
-   ====================== */
-.navbar-burger {
-	cursor: pointer;
-	display: none;
-	flex-flow: column;
-	justify-content: space-around;
-	height: 26px;
-	width: 27px;
-	margin: 0;
-	z-index: 10;
-	position: absolute;
-	right: 6%;
-	top: calc(50% - 13px);
-}
 
-.navbar-burger span {
-	background-color: #000;
-	display: block;
-	height: 2px;
-	transform-origin: center;
-	transition: all 0.3s ease;
-	width: 100%;
-	border-radius: 3px;
-}
-
-.navbar-burger.is-active span:nth-child(1) {
-	transform: rotate(45deg);
-	position: relative;
-	top: 8px;
-}
-
-.navbar-burger.is-active span:nth-child(2) {
-	opacity: 0;
-}
-
-.navbar-burger.is-active span:nth-child(3) {
-	transform: rotate(-45deg);
-	position: relative;
-	top: -8px;
-}
-
-/* ======================
-   SP Menu
-   ====================== */
-.navbar-menu {
-	visibility: hidden;
-	opacity: 0;
-	width: 100%;
-	position: fixed;
-	overflow: auto;
-	height: 100%;
-	left: 0;
-	top: 52px;
-	transition: all 0.5s ease;
-	z-index: 100;
-	padding: 20px 24px 36px;
-	background-color: #fff;
-}
-
-.navbar-menu.is-active {
-	opacity: 1;
-	visibility: visible;
-}
-
-.navbar-menu .inner {
-	padding-bottom: 100px;
-}
-
-.h_nav_sp .btn {
-	width: 100%;
-	margin: 0 auto;
-	max-width: 328px;
-	height: 40px;
-	line-height: 40px;
-	display: block;
-	background-color: #ff6262;
-	border-radius: 30px;
-	color: #fff;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-}
-
-.h_nav_sp dl {
-	margin-top: 20px;
-}
-
-.h_nav_sp dl dd {
-	padding: 20px 0;
-	border-bottom: solid 1px #f1f5f9;
-	font-weight: bold;
-	line-height: 2;
-	letter-spacing: 0.08px;
-	text-align: left;
-	margin: 0;
-}
-
-.h_nav_sp dl dd a {
-	color: #66657c;
-	text-decoration: none;
-}
-
-.h_nav_sp dl dd a:hover {
-	color: #00aed4;
-}
-
-/* ======================
-   Mobile (767px以下)
-   ====================== */
-@media screen and (max-width: 767px) {
-	.pc {
-		display: none !important;
+/* ========================================================
+   タブレット・小型PC (max-width: 1100px)
+   ナビ・ボタンのサイズ縮小
+   ======================================================== */
+@media screen and (max-width: 1100px) {
+	.l-header__nav-list li {
+		margin-right: 20px;
 	}
 
-	.header {
-		height: 52px;
-		line-height: 52px;
+	.l-header__nav-list a {
+		font-size: 0.8125em;
 	}
 
-	.header .container {
+	.c-button__header--frame,
+	.c-button__header {
+		height: 40px;
+		padding: 0 16px;
+		font-size: 0.8125em;
+	}
+
+	.l-header__logo {
+		margin-right: 24px;
+	}
+}
+
+
+/* ========================================================
+   モバイル (max-width: 960px)
+   ハンバーガー表示、ドロップダウンナビ
+   ======================================================== */
+@media screen and (max-width: 960px) {
+
+	/* --- ヘッダー本体 --- */
+	.l-header {
+		height: 60px;
+		line-height: 60px;
+	}
+
+	.l-header__inner {
 		width: 100%;
-		padding: 0 6%;
+		padding: 0 16px;
 	}
 
-	.header .h_top-block {
-		position: relative;
-		height: 52px;
-	}
-
-	.logo-mark {
+	.l-header__logo {
 		margin-right: 0;
 	}
 
-	.logo-mark img {
-		width: 100px;
+	.l-header__logo-img {
+		width: 120px;
 		height: auto;
 	}
 
-	.navbar-burger {
+	/* --- ハンバーガーボタン --- */
+	.l-header__hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		width: 44px;
+		height: 44px;
+		padding: 0;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		margin-left: auto;
+	}
+
+	/* ハンバーガー → × アニメーション */
+	.l-header__hamburger.is-active .l-header__hamburger-line:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.l-header__hamburger.is-active .l-header__hamburger-line:nth-child(2) {
+		opacity: 0;
+	}
+
+	.l-header__hamburger.is-active .l-header__hamburger-line:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	/* --- ナビゲーションパネル（ドロップダウン） --- */
+	.l-header__nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		padding: 10px 24px 16px;
+		flex-direction: column;
+		gap: 14px;
+		z-index: 1000;
+	}
+
+	.l-header__nav.is-open {
 		display: flex;
 	}
-}
 
-/* ======================
-   Desktop (768px以上)
-   ====================== */
-@media screen and (min-width: 768px) {
-	.sp {
-		display: none !important;
+	/* --- メニュー項目 --- */
+	.l-header__nav-list {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.l-header__nav-list li {
+		margin-right: 0;
+		border-bottom: 1px solid #eee;
+	}
+
+	.l-header__nav-list a {
+		display: block;
+		padding: 10px 0;
+		font-size: 14px;
+	}
+
+	/* --- CTAボタン（モバイル） --- */
+	.l-header__nav-cta {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.c-button__header,
+	.c-button__header--frame {
+		width: 100%;
+		height: 40px;
+		font-size: 13px;
 	}
 }
 
-/* ======================
-   Large Desktop (1280px以上)
-   ====================== */
+
+/* ========================================================
+   小型スマホ (max-width: 600px)
+   ======================================================== */
+@media screen and (max-width: 600px) {
+	.l-header__inner {
+		padding: 0 12px;
+	}
+
+	.l-header__logo-img {
+		width: 100px;
+	}
+}
+
+
+/* ========================================================
+   Large Desktop (min-width: 1280px)
+   ======================================================== */
 @media only screen and (min-width: 1280px) {
-	.header .container {
+	.l-header__inner {
 		max-width: 1144px;
 		width: 100%;
 	}
 
-	.logo-mark {
+	.l-header__logo {
 		margin-right: 60px;
 	}
 
-	.h_l_nav ul li {
+	.l-header__nav-list li {
 		margin-right: 40px;
 	}
 }
