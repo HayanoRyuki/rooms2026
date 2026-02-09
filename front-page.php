@@ -48,8 +48,8 @@
 <?php // FAQ ?>
 <?php get_template_part('sections/faq'); ?>
 
-<?php // サービス一覧 ?>
-<?php get_template_part('sections/service'); ?>
+<?php // RECEPTIONISTシリーズ ?>
+<?php get_template_part('template-parts/sections/series'); ?>
 
 </main>
 <!-- /メインコンテンツ -->
