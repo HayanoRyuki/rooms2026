@@ -187,13 +187,13 @@ input.btn.btn_dl {
 	height: 56px;
 	padding: 0;
 	border-radius: 30px;
-	background-color: #ff6262;
+	background-color: var(--color-danger);
 	line-height: 56px;
 	text-align: center;
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
-	box-shadow: 0 5px 0 #e45959;
+	box-shadow: 0 5px 0 var(--color-danger-hover);
 	border: none;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -206,7 +206,7 @@ input.btn.btn_dl {
 input.btn.btn_dl:hover {
 	background-color: #ff7a7a;
 	transform: translateY(2px);
-	box-shadow: 0 3px 0 #e45959;
+	box-shadow: 0 3px 0 var(--color-danger-hover);
 }
 
 /* ======================

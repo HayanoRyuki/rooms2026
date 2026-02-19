@@ -7,7 +7,7 @@
    Section Container
    ====================== */
 .service-index-wrap {
-	background-color: #f1f5f9;
+	background-color: var(--color-bg);
 	padding: 80px 0 110px;
 }
 
@@ -23,14 +23,14 @@
 .service-index-wrap h3 {
 	font-size: 2.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	text-align: center;
 	margin-bottom: 20px;
 }
 
 .service-index-wrap p.b1 {
 	font-size: 1.125em;
-	color: #66657c;
+	color: var(--color-text-light);
 	text-align: center;
 	line-height: 1.8;
 	margin-bottom: 0;
@@ -52,7 +52,7 @@
 
 .service-index-wrap .card-box .uk-card {
 	box-shadow: 20px 20px 20px 0 rgba(125, 134, 136, 0.1);
-	border: solid 1px #f1f5f9;
+	border: solid 1px var(--color-bg);
 	background-color: #fff;
 	border-radius: 10px;
 	padding: 0;
@@ -64,8 +64,8 @@
 }
 
 .service-index-wrap .card-box .uk-card.current {
-	border: 2px solid #57c2e9;
-	background-color: #ebfafe;
+	border: 2px solid var(--color-primary);
+	background-color: var(--color-bg-alt);
 }
 
 .service-index-wrap .card-box .uk-card a {
@@ -102,7 +102,7 @@
 .service-index-wrap .card-box .tit-box h3 {
 	font-size: 1.75em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	letter-spacing: 0.14px;
 	margin: 0;
 	text-align: left;
@@ -113,7 +113,7 @@
 	display: block;
 	line-height: 1.33;
 	letter-spacing: 0.12px;
-	color: #66657c;
+	color: var(--color-text-light);
 	margin-bottom: 4px;
 }
 
@@ -122,7 +122,7 @@
    ====================== */
 .service-index-wrap .card-box .uk-card p {
 	font-size: 0.9375em;
-	color: #66657c;
+	color: var(--color-text-light);
 	margin: 0 0 20px;
 	line-height: 1.6;
 }

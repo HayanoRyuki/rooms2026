@@ -20,7 +20,7 @@
 .movie-section h3 {
 	font-size: 2.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	text-align: center;
 	margin-bottom: 40px;
 }
@@ -42,7 +42,7 @@
 	text-align: center;
 	font-size: 1.25em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 }
 
 /* ======================

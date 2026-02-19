@@ -2,20 +2,39 @@
 /* CSS Document */
 
 :root {
-  --accent-light: #ebfafe;
-  --accent-default: #57c2e9;
-  --accent-dark: #00aed4;
-  --light-white: #fff;
-  --light-gray-lightest: #f1f5f9;
-  --light-divider: #d3d9e5;
-  --light-gray: #c3cbcd;
-  --light-gray-dark: #66657c;
-  --light-black: #112d48;
-  --error: #fb4e4e;
-  --cta: #ffd583;
-  --cta-letters: #463614;
-	--cta-hover: #FFDC98;
-  --body-black: #0e1530;
+  /* ===== 基本カラー ===== */
+  --color-primary: #0081A1;
+  --color-primary-hover: #0098BB;
+  --color-secondary: #0081A1;
+  --color-accent: #F7F6F4;
+  /* ===== モノトーン ===== */
+  --color-text: #413C3A;
+  --color-text-light: #59514E;
+  --color-bg: #F7F6F4;
+  --color-bg-alt: #EBFAFE;
+  --color-border: #C2BCB9;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  /* ===== アラート・強調カラー（赤系） ===== */
+  --color-danger: #FF6262;
+  --color-danger-hover: #F43B3B;
+  --color-danger-light: #FFE8EA;
+  /* ===== 旧変数互換（段階的に廃止） ===== */
+  --accent-light: var(--color-bg-alt);
+  --accent-default: var(--color-secondary);
+  --accent-dark: var(--color-primary);
+  --light-white: var(--color-white);
+  --light-gray-lightest: var(--color-bg);
+  --light-divider: var(--color-border);
+  --light-gray: var(--color-border);
+  --light-gray-dark: var(--color-text-light);
+  --light-black: var(--color-text);
+  --error: var(--color-danger);
+  --cta: var(--color-danger);
+  --cta-letters: var(--color-white);
+  --cta-hover: var(--color-danger-hover);
+  --body-black: var(--color-text);
+  /* ===== スペーシング ===== */
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
   --spacing-s: 20px;
@@ -126,20 +145,20 @@ a[target="_blank"] i {
   height: 50px;
   padding: 0 24px;
   border-radius: 30px;
-  background-color: #ff6262;
+  background-color: var(--color-danger);
   line-height: 50px;
   letter-spacing: 0.08px;
   text-align: center;
 	font-weight:bold;
   color: #fff;
 	display: inline-block;
-	box-shadow: 0 5px 0 #e45959;
+	box-shadow: 0 5px 0 var(--color-danger-hover);
 }
 .btn.btn_sq {
 	border-radius: 8px;
 }
 .btn:hover {
-	background-color: #ff6262;
+	background-color: var(--color-danger);
 	color: var(--cta-letters);
 	opacity:1;
 }
@@ -187,7 +206,7 @@ img {
 
 .bg_glay{
 	padding:30px 0;
-  background:transparent linear-gradient(90deg, #F2FDFF 0%, #D9F5FD 100%) 0% 0% no-repeat padding-box;
+  background:transparent linear-gradient(90deg, var(--color-bg) 0%, var(--color-bg-alt) 100%) 0% 0% no-repeat padding-box;
 }
 .bg_blue{
   background-color: var(--accent-light);

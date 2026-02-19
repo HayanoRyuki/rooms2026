@@ -16,13 +16,13 @@
 	text-align: center;
 	font-size: 2.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 }
 
 .sec05:not(.rec-space) > .container > .b1 {
 	text-align: center;
 	margin-bottom: 40px;
-	color: #66657c;
+	color: var(--color-text-light);
 }
 
 /* ======================
@@ -47,7 +47,7 @@
 	font-size: 0.8em;
 	padding-top: 10px;
 	text-align: left;
-	color: #66657c;
+	color: var(--color-text-light);
 	line-height: 1.6;
 }
 

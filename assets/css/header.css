@@ -98,14 +98,14 @@
 .l-header__nav-list a {
 	font-size: 0.875em;
 	font-weight: bold;
-	color: #66657c;
+	color: var(--color-text-light);
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 .l-header__nav-list a:hover,
 .l-header__nav-list a.current {
-	color: #00aed4;
+	color: var(--color-primary);
 }
 
 /* ======================
@@ -126,9 +126,9 @@
 	height: 44px;
 	padding: 0 24px;
 	background-color: #fff;
-	border: 2px solid #ff6262;
+	border: 2px solid var(--color-danger);
 	border-radius: 30px;
-	color: #ff6262;
+	color: var(--color-danger);
 	font-size: 0.875em;
 	font-weight: bold;
 	text-decoration: none;
@@ -139,7 +139,7 @@
 }
 
 .c-button__header--frame:hover {
-	background-color: #ff6262;
+	background-color: var(--color-danger);
 	color: #fff;
 }
 
@@ -150,8 +150,8 @@
 	justify-content: center;
 	height: 44px;
 	padding: 0 24px;
-	background-color: #ff6262;
-	border: 2px solid #ff6262;
+	background-color: var(--color-danger);
+	border: 2px solid var(--color-danger);
 	border-radius: 30px;
 	color: #fff;
 	font-size: 0.875em;
@@ -164,8 +164,8 @@
 }
 
 .c-button__header:hover {
-	background-color: #e45959;
-	border-color: #e45959;
+	background-color: var(--color-danger-hover);
+	border-color: var(--color-danger-hover);
 	color: #fff;
 }
 

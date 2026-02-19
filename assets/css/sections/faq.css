@@ -22,7 +22,7 @@
 	text-align: center;
 	font-size: 2.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 }
 
 /* ======================
@@ -37,11 +37,11 @@
 .faq-index-wrap > li {
 	font-size: 1em;
 	padding: 24px 0;
-	border-bottom: #d3d9e5 1px solid;
+	border-bottom: var(--color-border) 1px solid;
 }
 
 .faq-index-wrap > li:first-child {
-	border-top: #d3d9e5 1px solid;
+	border-top: var(--color-border) 1px solid;
 }
 
 /* ======================
@@ -52,7 +52,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-size: 1.125em;
-	color: #112d48;
+	color: var(--color-text);
 	font-weight: bold;
 	text-decoration: none;
 	position: relative;
@@ -75,7 +75,7 @@
 }
 
 .faq-index-wrap li .uk-accordion-content p {
-	color: #66657c;
+	color: var(--color-text-light);
 	line-height: 1.8;
 	font-size: 1em;
 	margin: 0;

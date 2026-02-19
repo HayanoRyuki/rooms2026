@@ -43,7 +43,7 @@
 .sec_point_wrap h3 {
 	font-size: 2em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	margin-bottom: 40px;
 	line-height: 1.4;
 }
@@ -69,20 +69,20 @@
 	top: 0.5em;
 	width: 8px;
 	height: 8px;
-	background-color: #57c2e9;
+	background-color: var(--color-primary);
 	border-radius: 50%;
 }
 
 .sec_point_text h4 {
 	font-size: 1.25em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	margin-bottom: 0.5em;
 }
 
 .sec_point_text p {
 	font-size: 1em;
-	color: #66657c;
+	color: var(--color-text-light);
 	line-height: 1.8;
 }
 

@@ -405,14 +405,14 @@
 #resource-download-form .btn-submit {
   width: 100%;
   height: 50px;
-  background: #ff6262;
+  background: var(--color-danger);
   color: var(--light-white);
   border: none;
   border-radius: 30px;
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 5px 0 #e45959;
+  box-shadow: 0 5px 0 var(--color-danger-hover);
   transition: all 0.3s ease;
 }
 

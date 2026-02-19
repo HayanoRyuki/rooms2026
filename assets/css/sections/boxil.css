@@ -19,12 +19,12 @@
 	font-size: 1.75em;
 	font-weight: bold;
 	line-height: 1.5;
-	color: #112d48;
+	color: var(--color-text);
 	margin-bottom: 40px;
 }
 
 .boxil h2 span {
-	color: #00aed4;
+	color: var(--color-primary);
 	display: block;
 	font-size: 1.2em;
 }
@@ -62,7 +62,7 @@
    ====================== */
 .boxil p {
 	font-size: 0.75em;
-	color: #66657c;
+	color: var(--color-text-light);
 	line-height: 1.6;
 	max-width: 900px;
 	margin: 0 auto;

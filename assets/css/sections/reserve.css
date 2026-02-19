@@ -15,7 +15,7 @@
 	text-align: center;
 	font-size: 2em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	margin-bottom: 40px;
 }
 
@@ -38,10 +38,10 @@
 	text-align: center;
 	font-size: 0.875em;
 	font-weight: bold;
-	color: #00aed4;
+	color: var(--color-primary);
 	margin-bottom: 20px;
 	padding: 0.5em 1em;
-	background: #ebfafe;
+	background: var(--color-bg-alt);
 	border-radius: 20px;
 	width: fit-content;
 	margin-left: auto;
@@ -54,10 +54,10 @@
 	text-align: center;
 	font-size: 0.875em;
 	font-weight: bold;
-	color: #00aed4;
+	color: var(--color-primary);
 	margin-bottom: 20px;
 	padding: 0.5em 1em;
-	background: #ebfafe;
+	background: var(--color-bg-alt);
 	border-radius: 20px;
 	width: fit-content;
 	margin-left: auto;
@@ -102,13 +102,13 @@
 .top_reserve_text h4 {
 	font-size: 1.125em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	margin-bottom: 0.5em;
 }
 
 .top_reserve_text p {
 	font-size: 0.875em;
-	color: #66657c;
+	color: var(--color-text-light);
 	line-height: 1.6;
 }
 

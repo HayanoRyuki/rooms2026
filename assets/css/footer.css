@@ -7,7 +7,7 @@
    ====================== */
 .footer,
 .foot-nav-wrapper {
-	background-color: #f1f5f9;
+	background-color: var(--color-bg);
 	padding: 80px 0 60px;
 }
 
@@ -60,7 +60,7 @@
 .foot-nav .tit-box h6 {
 	font-size: 1em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	margin: 0;
 	line-height: 1.5;
 }
@@ -69,19 +69,19 @@
 	display: block;
 	font-size: 0.75em;
 	font-weight: bold;
-	color: #66657c;
+	color: var(--color-text-light);
 	margin-bottom: 12px;
 	line-height: 1.33;
 	letter-spacing: 0.12px;
 }
 
 .foot-nav .tit-box h6 a {
-	color: #112d48;
+	color: var(--color-text);
 	text-decoration: none;
 }
 
 .foot-nav .tit-box h6 a:hover {
-	color: #00aed4;
+	color: var(--color-primary);
 }
 
 .foot-nav .tit-box span {
@@ -105,13 +105,13 @@
 }
 
 .f-nav-list li a {
-	color: #66657c;
+	color: var(--color-text-light);
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
 
 .f-nav-list li a:hover {
-	color: #00aed4;
+	color: var(--color-primary);
 }
 
 /* ======================
@@ -135,16 +135,16 @@
 .f_s_nav ul li {
 	padding-right: 1rem;
 	font-size: 0.75em;
-	color: #66657c;
+	color: var(--color-text-light);
 }
 
 .f_s_nav ul li a {
-	color: #66657c;
+	color: var(--color-text-light);
 	text-decoration: none;
 }
 
 .f_s_nav ul li a:hover {
-	color: #00aed4;
+	color: var(--color-primary);
 }
 
 /* ======================
@@ -161,7 +161,7 @@
 	font-weight: lighter;
 	line-height: 1.5;
 	letter-spacing: 0.77px;
-	color: #66657c;
+	color: var(--color-text-light);
 	font-family: 'Barlow', sans-serif;
 }
 
@@ -208,7 +208,7 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		color: #66657c;
+		color: var(--color-text-light);
 	}
 
 	.foot-nav .tit-box span.open i:before {
@@ -241,7 +241,7 @@
 	/* Copyright */
 	.f-copyright small {
 		font-size: 10px;
-		color: #c3cbcd;
+		color: var(--color-border);
 	}
 }
 

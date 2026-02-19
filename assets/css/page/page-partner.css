@@ -217,7 +217,7 @@
   max-width: 1040px;
 }
 .secPartnerList .md-secHead .secTtl {
-  color: #112d48;
+  color: var(--color-text);
   font-size: 35px;
   font-weight: 700;
   line-height: 1.4;
@@ -279,7 +279,7 @@
   grid-gap: 12px;
 }
 .secPartnerList .secPartnerListFilterWrap .secPartnerListFilter a {
-  color: #0081A1;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
@@ -306,7 +306,7 @@
   margin-top: 40px;
 }
 .secPartnerList .ctsBlock .blockTtl {
-  color: #112D48;
+  color: var(--color-text);
   font-size: 29px;
   font-weight: 700;
   line-height: 1;
@@ -344,7 +344,7 @@
   font-size: 14px;
   font-weight: 400;
   margin-top: 16px;
-  color: #413C3A;
+  color: var(--color-text);
 }
 .secPartnerList .ctsBlock .ctsList {
   box-sizing: border-box;
@@ -396,7 +396,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #0081A1;
+  color: var(--color-primary);
   text-decoration: underline;
   margin-top: 16px;
   word-break: break-all;
@@ -416,7 +416,7 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0;
-  border: solid 1px #D3D9E5;
+  border: solid 1px var(--color-border);
   height: 24px;
   padding: 0 12px;
   border-radius: 12px;
@@ -489,7 +489,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #0081A1;
+  color: var(--color-primary);
   text-decoration: underline;
   margin-top: 16px;
   word-break: break-all;
@@ -509,7 +509,7 @@
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0;
-  border: solid 1px #D3D9E5;
+  border: solid 1px var(--color-border);
   height: 24px;
   padding: 0 12px;
   border-radius: 12px;
@@ -628,7 +628,7 @@
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  border: solid 2px #0098BB;
+  border: solid 2px var(--color-primary-hover);
   background-color: #FFFFFF;
   display: flex;
   align-items: center;

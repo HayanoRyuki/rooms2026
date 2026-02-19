@@ -15,7 +15,7 @@
 	margin-bottom: 50px;
 	font-size: 2.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	text-align: center;
 }
 
@@ -62,7 +62,7 @@
 	font-family: 'Barlow', sans-serif;
 	font-size: 2.5em;
 	font-weight: bold;
-	color: #57c2e9;
+	color: var(--color-primary);
 	line-height: 1;
 }
 
@@ -72,7 +72,7 @@
 .capabilities_ul_li h4 {
 	font-size: 1.375em;
 	font-weight: bold;
-	color: #112d48;
+	color: var(--color-text);
 	text-align: center;
 	line-height: 1.5;
 	margin-bottom: 20px;
@@ -81,7 +81,7 @@
 .capabilities_ul_li h4 span {
 	display: block;
 	font-size: 0.65em;
-	color: #66657c;
+	color: var(--color-text-light);
 	font-weight: bold;
 	margin-bottom: 4px;
 }

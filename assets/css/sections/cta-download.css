@@ -9,7 +9,7 @@
 .bnr_dl_cta {
 	margin: 6.25vw 0 0;
 	padding: 0 35.5% 0 calc((100% - 89.5%) / 2);
-	background-color: #00aed4;
+	background-color: var(--color-primary);
 	position: relative;
 }
 
@@ -79,7 +79,7 @@
    CTA Button
    ====================== */
 .bnr_dl_cta .btn_dl {
-	background-color: #ff6262;
+	background-color: var(--color-danger);
 	color: #fff;
 }
 
