@@ -1,3 +1,4 @@
+<?php if ( ! function_exists( 'get_field' ) ) return; ?>
 <div class="logo-slider">
   <div class="logo-slide-track">
 
