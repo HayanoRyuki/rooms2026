@@ -150,15 +150,20 @@
   margin-right: 8px;
 }
 
-/* ======================
-   Single - 詳細ページ
-   ====================== */
-.resource-single {
-  padding: var(--spacing-m) 0 var(--spacing-l);
+/* =========================================================
+   Single - 詳細ページ（rcp2026 統一）
+   ========================================================= */
+.resource-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.resource-content-wrap {
-  gap: var(--spacing-m);
+.resource-columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .resource-main {
@@ -167,266 +172,151 @@
 }
 
 .resource-sidebar {
-  width: 380px;
+  width: 360px;
   flex-shrink: 0;
 }
 
 /* ヘッダー */
 .resource-header {
-  margin-bottom: var(--spacing-m);
-}
-
-.resource-categories {
-  margin-bottom: 15px;
-}
-
-.resource-category-tag {
-  display: inline-block;
-  padding: 5px 15px;
-  background: var(--accent-dark);
-  color: var(--light-white);
-  font-size: 0.75em;
-  font-weight: bold;
-  border-radius: 3px;
-  text-decoration: none;
-  margin-right: 8px;
-}
-
-.resource-category-tag:hover {
-  background: var(--accent-default);
-  color: var(--light-white);
+  margin-bottom: 2rem;
 }
 
 .resource-title {
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: bold;
-  color: var(--light-black);
+  color: var(--light-black, #333);
   line-height: 1.4;
 }
 
 /* アイキャッチ */
-.resource-featured-image {
-  margin-bottom: var(--spacing-m);
-  border-radius: 10px;
+.resource-thumbnail {
+  margin-bottom: 2rem;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.resource-featured-image img {
+.resource-thumbnail img {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+/* メタ情報（インライン） */
+.resource-meta-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875em;
+}
+
+.resource-meta-inline .resource-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent-dark, #0073aa);
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.resource-meta-inline .resource-value {
+  color: var(--light-gray-dark, #666);
+  margin-right: 1rem;
+}
+
+/* メタ情報（ブロック） */
+.resource-meta {
+  margin-bottom: 2rem;
+  border: 1px solid var(--light-divider, #e0e0e0);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: var(--color-bg-alt, #f9f9f9);
+}
+
+.resource-row {
+  margin-bottom: 1rem;
+}
+
+.resource-row:last-child {
+  margin-bottom: 0;
+}
+
+.resource-row .resource-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--accent-dark, #0073aa);
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.resource-row .resource-value {
+  display: block;
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: var(--light-gray-dark, #555);
 }
 
 /* 本文 */
-.resource-body {
-  margin-bottom: var(--spacing-m);
+.resource-content {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 1em;
+  color: var(--light-gray-dark, #555);
 }
 
-.resource-body p {
-  font-size: 1em;
-  line-height: 1.8;
-  color: var(--light-gray-dark);
+.resource-content p {
   margin-bottom: 1em;
 }
 
-/* ポイント */
-.resource-points {
-  background: var(--accent-light);
-  border-radius: 10px;
-  padding: var(--spacing-m);
-  margin-bottom: var(--spacing-m);
-}
-
-.points-title {
-  font-size: 1.25em;
+.resource-content h2 {
+  font-size: 1.4em;
   font-weight: bold;
-  color: var(--light-black);
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid var(--accent-default);
+  margin: 2em 0 1em;
+  color: var(--light-black, #333);
 }
 
-.points-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.points-list li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 15px;
-  font-size: 1em;
-  color: var(--light-black);
-  line-height: 1.6;
-}
-
-.points-list li:last-child {
-  margin-bottom: 0;
-}
-
-.points-list li i {
-  color: var(--accent-dark);
-  margin-right: 12px;
-  margin-top: 3px;
-  font-size: 1.1em;
-}
-
-/* 関連資料 */
-.related-resources {
-  border-top: 1px solid var(--light-divider);
-  padding-top: var(--spacing-m);
-}
-
-.related-title {
-  font-size: 1.25em;
+.resource-content h3 {
+  font-size: 1.2em;
   font-weight: bold;
-  color: var(--light-black);
-  margin-bottom: var(--spacing-s);
+  margin: 1.5em 0 0.75em;
+  color: var(--light-black, #333);
 }
 
-.related-card {
-  display: block;
-  text-decoration: none;
-}
-
-.related-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.related-card-title {
-  font-size: 0.875em;
-  font-weight: bold;
-  color: var(--light-black);
-  line-height: 1.5;
-}
-
-.related-card:hover .related-card-title {
-  color: var(--accent-dark);
-}
-
-/* サイドバー - ダウンロードフォーム */
-.download-form-box {
-  background: var(--light-white);
-  border-radius: 10px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-  padding: var(--spacing-m);
+/* サイドバー - フォーム埋め込み */
+.resource-form {
   position: sticky;
   top: 100px;
-}
-
-.form-title {
-  font-size: 1.25em;
-  font-weight: bold;
-  color: var(--light-black);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.form-description {
-  font-size: 0.875em;
-  color: var(--light-gray-dark);
-  text-align: center;
-  margin-bottom: var(--spacing-s);
-  line-height: 1.6;
-}
-
-#resource-download-form .form-group {
-  margin-bottom: 15px;
-}
-
-#resource-download-form label {
-  display: block;
-  font-size: 0.875em;
-  font-weight: bold;
-  color: var(--light-black);
-  margin-bottom: 8px;
-}
-
-#resource-download-form label .required {
-  color: var(--error);
-  font-size: 0.8em;
-  margin-left: 5px;
-}
-
-#resource-download-form input[type="text"],
-#resource-download-form input[type="email"],
-#resource-download-form input[type="tel"] {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid var(--light-divider);
-  border-radius: 5px;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
-}
-
-#resource-download-form input:focus {
-  outline: none;
-  border-color: var(--accent-default);
-}
-
-#resource-download-form .name-fields {
-  display: flex;
-  gap: 10px;
-}
-
-#resource-download-form .name-fields input {
-  flex: 1;
-}
-
-#resource-download-form .form-agree {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-}
-
-#resource-download-form .form-agree input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  visibility: visible;
-}
-
-#resource-download-form .form-agree label {
-  font-size: 0.875em;
-  font-weight: normal;
-  margin-bottom: 0;
-}
-
-#resource-download-form .form-agree a {
-  color: var(--accent-dark);
-  text-decoration: underline;
-}
-
-#resource-download-form .btn-submit {
-  width: 100%;
-  height: 50px;
-  background: var(--color-danger);
-  color: var(--light-white);
-  border: none;
-  border-radius: 30px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 5px 0 var(--color-danger-hover);
-  transition: all 0.3s ease;
-}
-
-#resource-download-form .btn-submit:hover {
-  background: #ff7a7a;
-}
-
-#resource-download-form .btn-submit i {
-  margin-right: 8px;
+  background: var(--light-white, #fff);
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
 }
 
 /* ======================
    Responsive
    ====================== */
+@media screen and (max-width: 959px) {
+  .resource-columns {
+    flex-direction: column;
+  }
+
+  .resource-sidebar {
+    width: 100%;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .resource-form {
+    position: static;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .resource-archive {
     padding: var(--spacing-l) 6%;
@@ -444,25 +334,15 @@
     height: 150px;
   }
 
-  .resource-single {
-    padding: var(--spacing-s) 6% var(--spacing-l);
-  }
-
-  .resource-content-wrap {
-    flex-direction: column;
-  }
-
-  .resource-sidebar {
-    width: 100%;
-    order: -1;
-    margin-bottom: var(--spacing-m);
-  }
-
-  .download-form-box {
-    position: static;
+  .resource-container {
+    padding: 0 1rem;
   }
 
   .resource-title {
-    font-size: 1.5em;
+    font-size: 1.4em;
+  }
+
+  .resource-columns {
+    gap: 1.5rem;
   }
 }
