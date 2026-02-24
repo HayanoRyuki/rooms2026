@@ -1,4 +1,6 @@
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTS8C95"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<?php
+/**
+ * 旧: GTM noscript パーツ
+ * → header.php に統合済み（rcp2026 方式）
+ * このファイルは後方互換のため空で残す
+ */
