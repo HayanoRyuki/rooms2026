@@ -133,7 +133,7 @@
 }
 
 .f_s_nav ul li {
-	padding-right: 1rem;
+	padding-right: 10px;
 	font-size: 0.75em;
 	color: var(--color-text-light);
 }
