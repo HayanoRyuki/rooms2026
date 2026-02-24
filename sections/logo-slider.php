@@ -1,72 +1,46 @@
-<?php if ( ! function_exists( 'get_field' ) ) return; ?>
-<div class="logo-slider">
-  <div class="logo-slide-track">
+<?php
+/**
+ * ロゴスライダー（TOPページ用）
+ * client_logo CPT からサムネイルを取得して表示
+ */
 
-    <div class="slide">
-		<?php if( get_field('logo01') ): ?><img src="<?php the_field('logo01'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo01'); ?>" /><?php endif; ?>
-    </div>
-	  <div class="slide">
-     <?php if( get_field('logo02') ): ?><img src="<?php the_field('logo02'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo02'); ?>" /><?php endif; ?>
-    </div>
-	 <div class="slide">
-     <?php if( get_field('logo03') ): ?><img src="<?php the_field('logo03'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo03'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo04') ): ?><img src="<?php the_field('logo04'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo04'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-      <?php if( get_field('logo05') ): ?><img src="<?php the_field('logo05'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo05'); ?>" /><?php endif; ?>
-    </div>
-     <div class="slide">
-     <?php if( get_field('logo06') ): ?><img src="<?php the_field('logo06'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo06'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo07') ): ?><img src="<?php the_field('logo07'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo07'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-      <?php if( get_field('logo08') ): ?><img src="<?php the_field('logo08'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo08'); ?>" /><?php endif; ?>
-    </div>
-	   <div class="slide">
-      <?php if( get_field('logo09') ): ?><img src="<?php the_field('logo09'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo09'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-    <?php if( get_field('logo10') ): ?><img src="<?php the_field('logo10'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo10'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo11') ): ?><img src="<?php the_field('logo11'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo11'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo12') ): ?><img src="<?php the_field('logo12'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo12'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-   <?php if( get_field('logo13') ): ?><img src="<?php the_field('logo13'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo13'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-    <?php if( get_field('logo14') ): ?><img src="<?php the_field('logo14'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo14'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo15') ): ?><img src="<?php the_field('logo15'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo15'); ?>" /><?php endif; ?>
-    </div>
-	 <div class="slide">
-		<?php if( get_field('logo01') ): ?><img src="<?php the_field('logo01'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo01'); ?>" /><?php endif; ?>
-    </div>
-	  <div class="slide">
-     <?php if( get_field('logo02') ): ?><img src="<?php the_field('logo02'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo02'); ?>" /><?php endif; ?>
-    </div>
-	 <div class="slide">
-     <?php if( get_field('logo03') ): ?><img src="<?php the_field('logo03'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo03'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo04') ): ?><img src="<?php the_field('logo04'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo04'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-      <?php if( get_field('logo05') ): ?><img src="<?php the_field('logo05'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo05'); ?>" /><?php endif; ?>
-    </div>
-     <div class="slide">
-     <?php if( get_field('logo06') ): ?><img src="<?php the_field('logo06'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo06'); ?>" /><?php endif; ?>
-    </div>
-    <div class="slide">
-     <?php if( get_field('logo07') ): ?><img src="<?php the_field('logo07'); ?>" width="150px" height="70.797px" alt="<?php the_field('alt_logo07'); ?>" /><?php endif; ?>
-    </div>
-  </div>
+$logo_query = new WP_Query([
+	'post_type'      => 'client_logo',
+	'posts_per_page' => 20,
+	'meta_key'       => '_show_in_slider',
+	'meta_value'     => '1',
+	'orderby'        => 'date',
+	'order'          => 'DESC',
+]);
+
+$logos = [];
+if ( $logo_query->have_posts() ) {
+	while ( $logo_query->have_posts() ) {
+		$logo_query->the_post();
+		if ( has_post_thumbnail() ) {
+			$logos[] = get_the_post_thumbnail( null, 'medium', [
+				'alt'    => get_the_title(),
+				'width'  => '150',
+				'height' => '71',
+			]);
+		}
+	}
+	wp_reset_postdata();
+}
+
+if ( empty( $logos ) ) {
+	return;
+}
+?>
+<div class="logo-slider">
+	<div class="logo-slide-track">
+		<?php foreach ( $logos as $logo ) : ?>
+			<div class="slide"><?php echo $logo; ?></div>
+		<?php endforeach; ?>
+
+		<?php // 無限スクロール用に複製 ?>
+		<?php foreach ( $logos as $logo ) : ?>
+			<div class="slide"><?php echo $logo; ?></div>
+		<?php endforeach; ?>
+	</div>
 </div>

@@ -159,3 +159,37 @@ function register_resource_taxonomy() {
 	);
 }
 add_action( 'init', 'register_resource_taxonomy' );
+
+
+// =================================================================
+// 導入企業ロゴ（client_logo）
+// =================================================================
+function register_custom_post_type_client_logo() {
+	register_post_type(
+		'client_logo',
+		array(
+			'labels' => array(
+				'name'               => '導入企業ロゴ',
+				'singular_name'      => '導入企業ロゴ',
+				'add_new'            => '新規追加',
+				'add_new_item'       => '新しいロゴを追加',
+				'edit_item'          => 'ロゴを編集',
+				'new_item'           => '新しいロゴ',
+				'view_item'          => 'ロゴを表示',
+				'search_items'       => 'ロゴを検索',
+				'not_found'          => 'ロゴが見つかりませんでした',
+				'not_found_in_trash' => 'ゴミ箱にロゴは見つかりませんでした',
+				'menu_name'          => '導入企業ロゴ',
+			),
+			'public'        => false,
+			'show_ui'       => true,
+			'has_archive'   => false,
+			'rewrite'       => false,
+			'menu_position' => 25,
+			'menu_icon'     => 'dashicons-format-image',
+			'supports'      => array( 'title', 'thumbnail' ),
+			'show_in_rest'  => true,
+		)
+	);
+}
+add_action( 'init', 'register_custom_post_type_client_logo' );
