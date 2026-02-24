@@ -637,7 +637,8 @@ img {
 /************************
  main wrapper
 *************************/
-.main.wrapper {
+.main.wrapper,
+.site-main {
     position: relative;
 }
 
