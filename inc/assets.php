@@ -50,13 +50,26 @@ function rooms2026_enqueue_assets() {
 	foreach ($common_js as $file) {
 		$path = "{$theme_dir}/assets/js/{$file}.js";
 		if (file_exists($path)) {
-			wp_enqueue_script(
-				"rooms2026-{$file}",
-				"{$theme_uri}/assets/js/{$file}.js",
-				['jquery'],
-				filemtime($path),
-				true
-			);
+
+			// ▼ main.js だけ強制キャッシュ破壊
+			if ($file === 'main') {
+				wp_enqueue_script(
+					"rooms2026-{$file}",
+					"{$theme_uri}/assets/js/{$file}.js?v=20251204-1",
+					['jquery'],
+					null,
+					true
+				);
+			} else {
+				wp_enqueue_script(
+					"rooms2026-{$file}",
+					"{$theme_uri}/assets/js/{$file}.js",
+					['jquery'],
+					filemtime($path),
+					true
+				);
+			}
+
 		}
 	}
 
@@ -66,7 +79,7 @@ function rooms2026_enqueue_assets() {
 	$sections = [
 		'hero', 'logo-slider', 'boxil', 'capabilities', 'management',
 		'analytics', 'reserve', 'voice', 'usage-image', 'multi-tenant',
-		'recommend', 'movie', 'cta-download', 'faq', 'service'
+		'recommend', 'movie', 'cta-download', 'faq', 'series', 'service'
 	];
 
 	foreach ($sections as $file) {
@@ -94,16 +107,18 @@ function rooms2026_enqueue_assets() {
 		);
 	}
 
-	$archives = ['case', 'event', 'resource'];
+	$archives = ['case', 'event', 'news', 'resource', 'post'];
 	foreach ($archives as $type) {
 		$path = "{$theme_dir}/assets/css/archive/{$type}.css";
-		if (file_exists($path) && is_post_type_archive($type)) {
-			wp_enqueue_style(
-				"rooms2026-archive-{$type}",
-				"{$theme_uri}/assets/css/archive/{$type}.css",
-				['rooms2026-archive-common'],
-				filemtime($path)
-			);
+		if (file_exists($path)) {
+			if (is_post_type_archive($type) || ($type === 'post' && (is_home() || is_category() || is_tag()))) {
+				wp_enqueue_style(
+					"rooms2026-archive-{$type}",
+					"{$theme_uri}/assets/css/archive/{$type}.css",
+					['rooms2026-archive-common'],
+					filemtime($path)
+				);
+			}
 		}
 	}
 
@@ -120,16 +135,24 @@ function rooms2026_enqueue_assets() {
 		);
 	}
 
-	$singles = ['case', 'event', 'resource'];
+	$singles = ['case', 'event', 'news', 'resource', 'post'];
 	foreach ($singles as $type) {
 		$path = "{$theme_dir}/assets/css/single/{$type}.css";
-		if (file_exists($path) && is_singular($type)) {
-			wp_enqueue_style(
-				"rooms2026-single-{$type}",
-				"{$theme_uri}/assets/css/single/{$type}.css",
-				['rooms2026-single-common'],
-				filemtime($path)
+		if (file_exists($path)) {
+
+			$is_match = (
+				($type === 'post' && is_single()) ||
+				is_singular($type)
 			);
+
+			if ($is_match) {
+				wp_enqueue_style(
+					"rooms2026-single-{$type}",
+					"{$theme_uri}/assets/css/single/{$type}.css",
+					['rooms2026-single-common'],
+					filemtime($path)
+				);
+			}
 		}
 	}
 
@@ -251,3 +274,93 @@ function rooms2026_enqueue_vendor_js() {
 	}
 }
 add_action('wp_enqueue_scripts', 'rooms2026_enqueue_vendor_js');
+
+
+// ===================================
+// Swiper（ロゴスライダー用）
+// ===================================
+function rooms2026_enqueue_swiper() {
+	if (is_front_page()) {
+		wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.css', [], '10.3.1');
+		wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.js', [], '10.3.1', true);
+
+		$theme_dir = get_template_directory();
+		$theme_uri = get_template_directory_uri();
+		$swiper_custom = "{$theme_dir}/assets/js/logo-slider.js";
+		if (file_exists($swiper_custom)) {
+			wp_enqueue_script(
+				'rooms2026-logo-slider',
+				"{$theme_uri}/assets/js/logo-slider.js",
+				['swiper'],
+				filemtime($swiper_custom),
+				true
+			);
+		}
+	}
+}
+add_action('wp_enqueue_scripts', 'rooms2026_enqueue_swiper', 15);
+
+
+// ===================================
+// LP専用フッターCSS
+// ===================================
+function rooms2026_enqueue_lp_footer_css() {
+	if (is_page_template('page-ads.php')) {
+		$path = get_template_directory() . '/assets/css/footer-lp.css';
+		if (file_exists($path)) {
+			wp_enqueue_style(
+				'rooms2026-footer-lp',
+				get_template_directory_uri() . '/assets/css/footer-lp.css',
+				[],
+				filemtime($path)
+			);
+		}
+	}
+}
+add_action('wp_enqueue_scripts', 'rooms2026_enqueue_lp_footer_css');
+
+
+// ===================================
+// フロントページ専用JS
+// ===================================
+add_action('wp_enqueue_scripts', function () {
+	if (is_front_page()) {
+		$path = get_template_directory() . '/assets/js/front-page.js';
+		if (file_exists($path)) {
+			wp_enqueue_script(
+				'rooms2026-front-page',
+				get_template_directory_uri() . '/assets/js/front-page.js',
+				['jquery', 'rooms2026-lib-slick.min'],
+				filemtime($path),
+				true
+			);
+		}
+	}
+}, 25);
+
+
+// ===================================
+// 固定ページ専用JS（自動検出）
+// ===================================
+function rooms2026_enqueue_page_js() {
+	$theme_dir = get_template_directory();
+	$theme_uri = get_template_directory_uri();
+
+	$page_js_dir = "{$theme_dir}/assets/js/";
+	if (is_dir($page_js_dir)) {
+		foreach (glob($page_js_dir . 'page-*.js') as $path) {
+			$basename = basename($path, '.js');
+			$slug = str_replace('page-', '', $basename);
+			if (is_page($slug) || is_page_template("{$basename}.php")) {
+				wp_enqueue_script(
+					"rooms2026-{$basename}",
+					"{$theme_uri}/assets/js/{$basename}.js",
+					['jquery'],
+					filemtime($path),
+					true
+				);
+			}
+		}
+	}
+}
+add_action('wp_enqueue_scripts', 'rooms2026_enqueue_page_js');

@@ -1,3 +1,8 @@
+/**
+ * Series Section - RECEPTIONISTシリーズについて
+ * sections/series.php
+ */
+
 .series-section {
   background-color: var(--color-bg-alt);
   padding: 80px 0;
@@ -9,13 +14,13 @@
   padding: 0 20px;
 }
 
-.section-title {
+.series-section .section-title {
   font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
 }
 
-.section-lead {
+.series-section .section-lead {
   text-align: center;
   margin-bottom: 3rem;
   line-height: 1.75;
@@ -50,7 +55,7 @@
   flex-direction: column;
   text-decoration: none;
   color: var(--color-text, #333);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .series-card:visited,
@@ -59,38 +64,53 @@
 }
 
 .series-card:hover {
+  transform: translateY(-6px);
   box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-.series-sub {
-  font-size: 0.85rem;
-  color: var(--color-text-light, #666);
-}
-
-.series-name {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-text, #333);
 }
 
 .series-head {
   display: flex;
   gap: 0.75rem;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
 .series-icon {
   width: 50px;
   height: 50px;
+  flex-shrink: 0;
+}
+
+.series-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.series-sub {
+  font-size: 0.8125rem;
+  color: var(--color-text-light, #666);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.series-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text, #333);
+  margin: 0;
 }
 
 .series-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-light, #666);
   margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .series-img {
   width: 100%;
   border-radius: 0.5rem;
+  margin-top: auto;
 }
 
 /* ===== Tablet ===== */
@@ -111,6 +131,19 @@
 
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
+  .series-section {
+    padding: 60px 0;
+  }
+
+  .series-section .section-title {
+    font-size: 1.75rem;
+  }
+
+  .series-section .section-lead {
+    font-size: 0.9375rem;
+    text-align: left;
+  }
+
   .series-grid {
     grid-template-columns: 1fr;
   }
