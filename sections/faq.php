@@ -13,7 +13,7 @@
 
           <a class="uk-accordion-title" href="#"><h3>会議室予約システム「予約ルームズ」の利用料金はいくらですか？</h3></a>
             <div class="uk-accordion-content">
-              <p>３つのプランがあります。詳細は料金表にてご確認いただけますので、お手数ですが、下記からお受取りください。<br><a class="btn mt-s" href="https://rooms.receptionist.jp/document-price/">料金表をもらう</a></p>
+              <p>３つのプランがあります。詳細は料金表にてご確認いただけますので、お手数ですが、下記からお受取りください。<br><a class="btn mt-s" href="/document-price/">料金表をもらう</a></p>
             </div>
         </li>
         <li>
@@ -21,14 +21,14 @@
           <a class="uk-accordion-title" href="#"><h3>契約前にトライアルは可能でしょうか？</h3></a>
             <div class="uk-accordion-content">
               <p>ご導入前に動作確認としてトライアルを無料で提供しています。お手数ですが、以下から問い合わせください。
-                <br><a class="btn mt-s" href="https://rooms.receptionist.jp/contact/">トライアルの問い合わせをする</a></p>
+                <br><a class="btn mt-s" href="/contact/">トライアルの問い合わせをする</a></p>
             </div>
         </li>
         <li>
 
           <a class="uk-accordion-title" href="#"><h3>会議室予約システム「予約ルームズ」の特徴は何ですか？</h3></a>
             <div class="uk-accordion-content">
-              <p>様々なサービスとの連携や使いやすく設計されたUIUXの他、導入しやすい価格や多くの機能などの特徴があります。<br><a class="btn mt-s" href="https://rooms.receptionist.jp/documents/">資料をもらう</a></p>
+              <p>様々なサービスとの連携や使いやすく設計されたUIUXの他、導入しやすい価格や多くの機能などの特徴があります。<br><a class="btn mt-s" href="/documents/">資料をもらう</a></p>
             </div>
         </li>
         <li>
@@ -49,7 +49,7 @@
           <a class="uk-accordion-title" href="#"><h3>座席予約も可能でしょうか？</h3></a>
             <div class="uk-accordion-content">
               <p>はい、可能です。お手数ですが、以下からスタッフに問い合わせください。
-                <br><a class="btn mt-s" href="https://rooms.receptionist.jp/contact/">問い合わせをする</a></p>
+                <br><a class="btn mt-s" href="/contact/">問い合わせをする</a></p>
             </div>
         </li>
         <li>

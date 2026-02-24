@@ -3,7 +3,7 @@
       <h3 class="uk-text-center">お客様の声</h3>
       <div class="uk-grid-large normal-index-wrap uk-flex" uk-grid uk-height-match="target: > .normal-index-box">
         <div class="normal-index-box uk-width-1-3@m">
-      <a href="https://rooms.receptionist.jp/case/sbs-group/" style="display: block;">
+      <a href="/case/sbs-group/" style="display: block;">
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
@@ -26,7 +26,7 @@
 
 
   <div class="normal-index-box uk-width-1-3@m pc">
-    <a href="https://rooms.receptionist.jp/case/mitsui-designtec/" style="display: block;">
+    <a href="/case/mitsui-designtec/" style="display: block;">
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
@@ -49,7 +49,7 @@
 
 
       <div class="normal-index-box uk-width-1-3@m pc">
-    <a href="https://rooms.receptionist.jp/case/final/" style="display: block;">
+    <a href="/case/final/" style="display: block;">
           <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                   <picture>
@@ -72,5 +72,5 @@
 
 
     </div>
-     <a href="https://rooms.receptionist.jp/case/" class="btn section_cta case_cta02" target="_blank">他の事例も見る</a>
+     <a href="/case/" class="btn section_cta case_cta02" target="_blank">他の事例も見る</a>
   </section>

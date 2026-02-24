@@ -34,7 +34,7 @@
       </a>
 
       <!-- 3. 予約ルームズ -->
-      <a href="https://rooms.receptionist.jp/" class="series-card" target="_blank" rel="noopener">
+      <a href="<?php echo home_url('/'); ?>" class="series-card">
         <div class="series-head">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/products/icon-RMS.png" class="series-icon">
           <div class="series-meta">
