@@ -1,16 +1,8 @@
 <?php
 
 /**
- * 「導入企業ロゴ」投稿タイプ — クラシックエディタ使用 & メタボックス
+ * 「導入企業ロゴ」投稿タイプにメタボックスを追加（TOP表示／スライダー表示）
  */
-
-// client_logo はブロックエディタ不要（タイトル＋サムネイル＋チェックボックスのみ）
-add_filter( 'use_block_editor_for_post_type', function ( $use, $post_type ) {
-	if ( $post_type === 'client_logo' ) {
-		return false;
-	}
-	return $use;
-}, 10, 2 );
 function add_client_logo_meta_boxes() {
   add_meta_box(
     'client_logo_display_options',      // メタボックスID
