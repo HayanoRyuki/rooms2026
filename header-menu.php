@@ -23,7 +23,7 @@
 			<ul class="l-header__nav-list">
 				<li><a href="<?php echo home_url('/'); ?>">機能について</a></li>
 				<li><a href="<?php echo home_url('/case/'); ?>">お客様の声</a></li>
-				<li><a href="<?php echo home_url('/price/'); ?>">料金表</a></li>
+				<li><a href="<?php echo home_url('/resource/price-book/'); ?>">料金表</a></li>
 				<li><a href="<?php echo home_url('/faq/'); ?>">よくあるご質問</a></li>
 				<li><a href="<?php echo home_url('/contact/'); ?>">問い合わせ</a></li>
 			</ul>
